@@ -1,0 +1,71 @@
+/** @format */
+
+@import "variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1
+// h2, h3, h4, h5, h6
+{
+  font-family: "Shrikhand";
+}
+
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+body {
+  font-family: "Roboto";
+}
+
+html {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 auto;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 1em;
+
+    section {
+      width: 100%;
+      padding: 1em 0;
+
+      .location {
+        background: #EAEAEA;
+background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+        };
+
+        p {
+            padding: 1em 0;
+        }
+      }
+
+      .jumbotron {
+        background-color: $light-grey-color;
+
+        h2 {
+          font-weight: 900;
+          padding: 1em 0; 
+        }
+      }
+    }
+  }
+
