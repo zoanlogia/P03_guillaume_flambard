@@ -16,9 +16,8 @@ h1
 }
 
 a {
-    color: black;
-    cursor: pointer;
-    text-decoration: none;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 body {
@@ -42,30 +41,69 @@ html {
     text-align: center;
     margin-top: 1em;
 
+    h1 a {
+      color: black;
+    }
+
     section {
       width: 100%;
-      padding: 1em 0;
+      padding-top: 0.7em;
 
       .location {
-        background: #EAEAEA;
-background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-        };
-
-        p {
-            padding: 1em 0;
-        }
+        background: #eaeaea;
+        border-top: 3px solid #e7e6e6;
+        // background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+        // background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+        // background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
       }
 
-      .jumbotron {
-        background-color: $light-grey-color;
+      p {
+        padding: 1em 0;
+        font-weight: 300;
+        color: $grey-text-color;
 
-        h2 {
-          font-weight: 900;
-          padding: 1em 0; 
+        i {
+          padding-right: 1em;
         }
+      }
+    }
+
+    .jumbotron {
+      background-color: $light-grey-color;
+      height: 275px;
+
+      h2 {
+        font-weight: 900;
+        padding: 1em 0;
+        margin: 0 0.5em;
+      }
+
+      button {
+        @include button-purple;
       }
     }
   }
 
+  .option-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1.5em;
+
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0.5em;
+      @include option;
+    }
+  }
+
+  .restaurants {
+   
+    p {
+      text-align: left!;
+    }
+  }
+}

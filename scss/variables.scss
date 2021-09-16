@@ -1,8 +1,36 @@
 /** @format */
 
+// variables
+
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
 $third-color: #99e2d0;
 $grey-color: #eaeaea;
 $light-grey-color: #f6f6f6;
+$grey-text-color: #302d2d;
+$gradiant-purple: linear-gradient(
+  90deg,
+  rgba(255, 121, 218, 1) 0%,
+  rgba(87, 32, 150, 1) 85%
+);
 
+// mixin
+
+@mixin button-purple {
+  border: none;
+  border-radius: 40px;
+  background: $gradiant-purple;
+  padding: 1em 1.2em;
+  
+  a {
+    color: white;
+    font-size: initial;
+  }
+}
+
+@mixin  option {
+  background-color: $light-grey-color;
+  border-radius: 15px;
+  height: 4.5em;
+  width: 100%;
+}
