@@ -12,7 +12,7 @@
 h1
 // h2, h3, h4, h5, h6
 {
-  font-family: "Shrikhand";
+  font-family: "Shrikhand",serif;
 }
 
 a {
@@ -21,7 +21,7 @@ a {
 }
 
 body {
-  font-family: "Roboto";
+  font-family: "Roboto", serif;
 }
 
 html {
@@ -30,8 +30,8 @@ html {
 
 .container {
   width: 100%;
-  margin: 0 auto;
-  padding: 0 auto;
+  margin: 0;
+  padding: 0;
 
   header {
     display: flex;
@@ -91,6 +91,7 @@ html {
     align-items: center;
     margin: 0 1.5em;
 
+    
     article {
       display: flex;
       flex-direction: column;
@@ -98,12 +99,18 @@ html {
       margin: 0.5em;
       @include option;
     }
+
+    img {
+      @include card-img;
+    }
   }
 
-  .restaurants {
-   
-    p {
-      text-align: left!;
-    }
+}
+.restaurants {
+
+  background-color: $light-grey-color;
+
+  p {
+    text-align: left;
   }
 }
