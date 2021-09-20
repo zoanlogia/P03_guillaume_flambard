@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+html {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+html {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1em;
+}
+header h1 a {
+  color: black;
+}
+header section {
+  width: 100%;
+  padding-top: 0.7em;
+}
+header section .location {
+  background: #eaeaea;
+  border-top: 3px solid #e7e6e6;
+}
+header section p {
+  padding: 1em 0;
+  font-weight: 300;
+  color: #302d2d;
+}
+header section p i {
+  padding-right: 1em;
+}
+header .jumbotron {
+  background-color: #f6f6f6;
+  height: 275px;
+}
+header .jumbotron h2 {
+  font-weight: 900;
+  padding: 1em 0;
+  margin: 0 0.5em;
+}
+header .jumbotron button {
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
+  padding: 1em 1.2em;
+}
+header .jumbotron button a {
+  color: white;
+  font-size: initial;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+html {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.option-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 1.5em;
+}
+.option-container .option-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0.5em;
+  background-color: #f6f6f6;
+  border-radius: 15px;
+  height: 4.5em;
+  width: 100%;
+}
+.option-container img {
+  min-width: 270px;
+  max-height: 135px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+}
+.restaurants p {
+  text-align: left;
+}
+.restaurants img {
+  min-width: 270px;
+  max-height: 135px;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Shrikhand", serif;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Roboto", serif;
+}
+
+html {
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/*# sourceMappingURL=main.css.map */
