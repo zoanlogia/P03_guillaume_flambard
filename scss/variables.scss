@@ -2,7 +2,9 @@
 
 $primary-color: #9356dc;
 $secondary-color: #ff79da;
+$light-hover: #f5edff;
 $third-color: #99e2d0;
+$footer-color: #353535;
 $grey-color: #eaeaea;
 $light-grey-color: #f6f6f6;
 $grey-text-color: #302d2d;
@@ -42,4 +44,9 @@ $gradiant-purple: linear-gradient(90deg,
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+}
+
+@mixin scale-hover {
+  transition: 0.3s;
+  transform: scale(1.03);
 }

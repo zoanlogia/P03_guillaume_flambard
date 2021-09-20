@@ -1,7 +1,6 @@
 @import '../variables.scss';
 @import '../global.scss';
 
-
 .option-container {
     text-align: center;
     display: flex;
@@ -9,6 +8,22 @@
     align-items: center;
     margin: 0 1.5em;
 
+    :hover {
+        transition: 0.3s;
+        transform: scale(1.03);
+        background-color: $light-hover;
+        height: 100%;
+
+        i {
+            color: $secondary-color;
+        }
+    }
+
+    a {
+        width: 100%;
+        display: block;
+    }
+    
 
     .option-item {
         display: flex;
@@ -17,6 +32,15 @@
         margin: 0.5em;
         @include option;
         @include box_shadow;
+
+        i,
+        strong {
+            margin: 1em;
+        }
+
+        :hover {
+            box-shadow: none;
+        }
     }
 
 }
@@ -24,25 +48,47 @@
 .option-container-restaurant {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
     align-items: center;
     text-align: left;
     background-color: $light-grey-color;
+    width: 100%;
+
+    a:hover{
+        @include scale-hover;
+    }
 
     img {
         @include card-img;
     }
 
     .option-item-restaurant {
-        border-radius:  10px;
+        border-radius: 10px;
         margin: 0.5em 0 0.5em 0em;
         @include box_shadow;
+
+        span {
+            display: flex;
+            justify-content: space-between;
+        }
+        i {
+            margin-right: 0.5em;
+            margin-top: 1em;
+
+        }
+
+        i:hover {
+            cursor: pointer;
+            color: $secondary-color;
+        }
+
+        p {
+            text-align: left;
+            margin-left: 1em;
+            margin-top: 0.5em;
+        }
+
     }
 
-    p {
-        text-align: left;
-
-    }
 
     img {
         @include card-img
