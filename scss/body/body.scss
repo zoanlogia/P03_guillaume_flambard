@@ -16,19 +16,32 @@
         justify-content: center;
         margin: 0.5em;
         @include option;
+        @include box_shadow;
     }
+
+}
+
+.option-container-restaurant {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+    background-color: $light-grey-color;
 
     img {
         @include card-img;
     }
-}
 
-.restaurants {
-
-    background-color: $light-grey-color;
+    .option-item-restaurant {
+        border-radius:  10px;
+        margin: 0.5em 0 0.5em 0em;
+        @include box_shadow;
+    }
 
     p {
         text-align: left;
+
     }
 
     img {
