@@ -1,0 +1,60 @@
+@media screen and (min-width: 730px) {
+    
+    .option-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .option-container-restaurant {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        img {
+            width: 50%;
+        }
+    }
+
+    footer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+
+
+    .option-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        justify-items: center;
+
+        a {
+            margin: 3em;
+        }
+    }
+
+    footer {
+        display: flex;
+    }
+
+    h2 {
+        padding-left: 3em;
+    }
+
+    .option-item {
+        width: 75%;
+        margin: 3em;
+
+
+    }
+}
