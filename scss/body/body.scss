@@ -20,8 +20,9 @@
     margin: 0 1.5em;
     transition-property: transform;
 
-    :hover {
+    .option-container, a:hover {
         transform: scale(1);
+        @include option;
         @include scale-hover;
         background-color: $light-hover;
        

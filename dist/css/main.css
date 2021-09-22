@@ -170,7 +170,7 @@ header .jumbotron button a {
 header .jumbotron button:hover {
   transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.15);
+  transform: scale(1.02);
 }
 header .header-img {
   height: 230px;
@@ -198,7 +198,7 @@ header .header-img {
 .button-container button:hover {
   transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.15);
+  transform: scale(1.02);
 }
 
 .option-container {
@@ -209,13 +209,17 @@ header .header-img {
   margin: 0 1.5em;
   transition-property: transform;
 }
-.option-container :hover {
+.option-container .option-container, .option-container a:hover {
   transform: scale(1);
+  background-color: #f6f6f6;
+  border-radius: 30px;
+  height: 4.5em;
+  width: 100%;
   transition: 0.3s;
-  transform: scale(1.15);
+  transform: scale(1.02);
   background-color: #f5edff;
 }
-.option-container :hover i {
+.option-container .option-container i, .option-container a:hover i {
   color: #ff79da;
 }
 .option-container .option-item {
@@ -224,7 +228,7 @@ header .header-img {
   justify-content: center;
   margin: 0.5em;
   background-color: #f6f6f6;
-  border-radius: 15px;
+  border-radius: 30px;
   height: 4.5em;
   width: 100%;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
@@ -288,7 +292,7 @@ header .header-img {
 .option-container-restaurant a:hover {
   transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.15);
+  transform: scale(1.02);
 }
 .option-container-restaurant img {
   min-width: 270px;
@@ -433,7 +437,7 @@ footer i {
     display: contents;
   }
   .option-container .items-menu span p {
-    margin-left: 2em;
+    margin: 2em;
   }
 
   footer .footer {

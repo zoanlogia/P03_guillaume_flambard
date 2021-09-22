@@ -31,7 +31,7 @@ $gradiant-purple: linear-gradient(90deg,
 
 @mixin option {
   background-color: $light-grey-color;
-  border-radius: 15px;
+  border-radius: 30px;
   height: 4.5em;
   width: 100%;
 }
@@ -51,7 +51,7 @@ $gradiant-purple: linear-gradient(90deg,
 
 @mixin scale-hover {
   transition: 0.3s;
-  transform: scale(1.15);
+  transform: scale(1.02);
 }
 
 @mixin rounded-top {
