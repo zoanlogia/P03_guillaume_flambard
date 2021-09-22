@@ -1,5 +1,5 @@
 @media screen and (min-width: 730px) {
-    
+
     .option-container {
         display: flex;
         flex-direction: row;
@@ -30,25 +30,45 @@
 
 @media screen and (min-width: 1400px) {
 
+    main {
+        h2 {
+    text-align: center!important;
+    padding: 1em;
+        }
+    }
 
+    .restaurants {
+        
+        text-align: center;
+
+        h2 {
+            padding: 1em;
+        }
+
+        .option-item-restaurant {
+            margin-bottom: 3em;
+        }
+     
+    }
 
     .option-container {
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-around;
         justify-items: center;
-
+        
         a {
             margin: 3em;
         }
+        
     }
 
     footer {
-        display: flex;
-    }
-
-    h2 {
-        padding-left: 3em;
+        .footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+        }
     }
 
     .option-item {

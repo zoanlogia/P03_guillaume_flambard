@@ -45,12 +45,20 @@
 
 }
 
+.restaurants {
+    background-color: $light-grey-color;
+
+    h2 {
+        text-align: left;
+    }
+}
+
 .option-container-restaurant {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: left;
-    background-color: $light-grey-color;
+   
 
     a:hover{
         @include scale-hover;
