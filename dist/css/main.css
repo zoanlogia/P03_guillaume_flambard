@@ -168,8 +168,9 @@ header .jumbotron button a {
   font-size: initial;
 }
 header .jumbotron button:hover {
+  transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.03);
+  transform: scale(1.15);
 }
 header .header-img {
   height: 230px;
@@ -195,8 +196,9 @@ header .header-img {
   font-size: initial;
 }
 .button-container button:hover {
+  transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.03);
+  transform: scale(1.15);
 }
 
 .option-container {
@@ -205,19 +207,16 @@ header .header-img {
   flex-direction: column;
   align-items: center;
   margin: 0 1.5em;
+  transition-property: transform;
 }
 .option-container :hover {
+  transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.03);
+  transform: scale(1.15);
   background-color: #f5edff;
-  height: 100%;
 }
 .option-container :hover i {
   color: #ff79da;
-}
-.option-container a {
-  width: 100%;
-  display: block;
 }
 .option-container .option-item {
   display: flex;
@@ -287,8 +286,9 @@ header .header-img {
   text-align: left;
 }
 .option-container-restaurant a:hover {
+  transform: scale(1);
   transition: 0.3s;
-  transform: scale(1.03);
+  transform: scale(1.15);
 }
 .option-container-restaurant img {
   min-width: 270px;
