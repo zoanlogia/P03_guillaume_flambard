@@ -2,55 +2,70 @@
 @import '../global.scss';
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 1em;
 
-    h1 a {
-      color: black;
+  h1 a {
+    color: black;
+  }
+
+ .cover {
+    background-image: url('../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    height: 175px;
+    width: 100%;
+    background-size: cover;
+    z-index: -1;
+    margin-bottom: -1.4em;
+  }
+
+  section {
+    width: 100%;
+    padding-top: 0.7em;
+
+    .location {
+      background: #eaeaea;
+      border-top: 3px solid #e7e6e6;
+      // background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+      // background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
+      // background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
     }
 
-    section {
-      width: 100%;
-      padding-top: 0.7em;
+    p {
+      padding: 1em 0;
+      font-weight: 300;
+      color: $grey-text-color;
 
-      .location {
-        background: #eaeaea;
-        border-top: 3px solid #e7e6e6;
-        // background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-        // background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-        // background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-      }
-
-      p {
-        padding: 1em 0;
-        font-weight: 300;
-        color: $grey-text-color;
-
-        i {
-          padding-right: 1em;
-        }
-      }
-    }
-
-    .jumbotron {
-      background-color: $light-grey-color;
-      height: 275px;
-
-      h2 {
-        font-weight: 900;
-        padding: 1em 0;
-        margin: 0 0.5em;
-      }
-
-      button {
-        @include button-purple;
-      }
-      button:hover {
-        @include scale-hover;
+      i {
+        padding-right: 1em;
       }
     }
   }
+
+  .jumbotron {
+    background-color: $light-grey-color;
+    height: 275px;
+
+    h2 {
+      font-weight: 900;
+      padding: 1em 0;
+      margin: 0 0.5em;
+    }
+
+    button {
+      @include button-purple;
+    }
+
+    button:hover {
+      @include scale-hover;
+    }
+  }
+
+  .header-img {
+    height: 230px;
+    width: 100%;
+  }
+}

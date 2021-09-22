@@ -1,5 +1,9 @@
 @media screen and (min-width: 730px) {
 
+    i {
+        font-size: 20px;
+    }
+
     .option-container {
         display: flex;
         flex-direction: row;
@@ -30,15 +34,39 @@
 
 @media screen and (min-width: 1400px) {
 
+    .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .upper {
+        text-align: left;
+    }
+
+    .items-menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     main {
         h2 {
-    text-align: center!important;
-    padding: 1em;
+            text-align: center !important;
+            padding: 1em;
         }
     }
 
     .restaurants {
-        
+display: flex;
+flex-direction: column;
+
+        // .w-40 {
+        //     width: 40%;
+        // }
+
         text-align: center;
 
         h2 {
@@ -48,19 +76,35 @@
         .option-item-restaurant {
             margin-bottom: 3em;
         }
-     
+
     }
 
     .option-container {
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-around;
+        justify-content: space-between;
         justify-items: center;
-        
+
         a {
-            margin: 3em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-        
+
+        .items-menu {
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                display: contents;
+
+                //    justify-content: space-between;
+                p {
+                    margin-left: 2em;
+                }
+            }
+        }
+
     }
 
     footer {
@@ -68,13 +112,7 @@
             display: flex;
             width: 100%;
             justify-content: space-around;
+            align-items: center;
         }
-    }
-
-    .option-item {
-        width: 75%;
-        margin: 3em;
-
-
     }
 }
