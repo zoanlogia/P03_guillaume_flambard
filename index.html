@@ -18,16 +18,21 @@
 
 <body>
   <div class="container">
-    <header class="header">
+    <header id="header" class="header">
       <h1><a href="#">Ohmyfood</a></h1>
-      <section class="first-section">
+      <section class="header__section">
         <div class="location">
-          <p>
-            <span>
-              <i class="fas fa-map-marker-alt"></i>
-            </span>
-            <strong>Paris, Belleville</strong>
-          </p>
+          <form action="">
+            <p>
+              <span>
+                <a href="#">
+                  <label for="location"><strong>Paris, Belleville</strong></label>
+                  <input type="text" hidden>
+                  <i class="fas fa-map-marker-alt"></i>
+                </a>
+              </span>
+            </p>
+          </form>
         </div>
         <div class="jumbotron">
           <h2><strong>Réservez le menu qui vous convient</strong></h2>
@@ -35,35 +40,38 @@
             Découvrez des restaurants d'exception, séléctionnés par nos soins.
           </p>
           <button>
-            <a href="#"> Explorer nos restaurants </a>
+            <a href="#"><strong>Explorer nos restaurants</strong></a>
           </button>
         </div>
       </section>
     </header>
-    <main>
-      <h2>Fonctionnement</h2>
-      <section class="option-container">
-          <div class="option-item">
-              <a href="#">
-              <i class="fas fa-mobile-alt"></i><p><strong>Choisissez un restaurant</strong></p> 
-            </a>
-            </div>
-          <div class="option-item">
-              <a href="#">
-              <i class="fas fa-list"></i><p><strong>Composez votre menu</strong></p> 
-            </a>
-            </div>
-          <div class="option-item">
-              <a href="#">
-              <i class="fas fa-store"></i><p><strong>Dégustez au restaurant</strong></p> 
-            </a>
-            </div>
-      </section>
-      <section class="restaurants">
+
+    <main id="main">
+      <div id="functional">
+        <h2>Fonctionnement</h2>
+        <section class="option-container">
+          <div class="option-container__item">
+            <span class="dot">1</span>
+            <i class="fas fa-mobile-alt"></i>
+            <p><strong>Choisissez un restaurant</strong></p>
+          </div>
+          <div class="option-container__item">
+            <span class="dot">2</span>
+            <i class="fas fa-list"></i>
+            <p><strong>Composez votre menu</strong></p>
+          </div>
+          <div class="option-container__item">
+            <span class="dot">3</span>
+            <i class="fas fa-store"></i>
+            <p><strong>Dégustez au restaurant</strong></p>
+          </div>
+        </section>
+      </div>
+      <section id="restaurants" class="restaurants">
         <h2>Restaurants</h2>
-        <div class="option-container-restaurant">
+        <div class="container-restaurant">
           <a href="#">
-            <div class="option-item-restaurant">
+            <div class="container-restaurant__item"><span class="new-alert">Nouveau</span>
               <img src="assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="" />
               <span>
                 <p><strong>La palette du goût</strong></p>
@@ -73,9 +81,8 @@
             </div>
           </a>
           <a href="#">
-            <div class="option-item-restaurant">
+            <div class="container-restaurant__item"><span class="new-alert">Nouveau</span>
               <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" />
-
               <span>
                 <p><strong>La note enchantée</strong></p>
                 <i class="far fa-heart fa-1x"></i>
@@ -84,7 +91,7 @@
             </div>
           </a>
           <a href="#">
-            <div class="option-item-restaurant">
+            <div class="container-restaurant__item">
               <img src="assets/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="" />
               <span>
                 <p><strong>À la française</strong></p>
@@ -94,7 +101,7 @@
             </div>
           </a>
           <a href="#">
-            <div class="option-item-restaurant">
+            <div class="container-restaurant__item">
               <img src="assets/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="" />
               <span>
                 <p><strong>Le délice des sens</strong></p>
@@ -106,7 +113,7 @@
         </div>
       </section>
     </main>
-    <footer>
+    <footer id="footer">
       <section class="footer">
         <h2 class="font">Ohmyfood</h2>
         <div class="container-icon">

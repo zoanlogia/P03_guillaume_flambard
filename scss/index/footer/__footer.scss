@@ -1,0 +1,43 @@
+footer {
+
+    background-color: $footer-color;
+    color: white;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+
+    .font {
+        font-family: "Shrikhand", serif;
+    }
+
+
+    .container-icon {
+        display: flex;
+    }
+
+    h2,
+    p,
+    i {
+        color: white;
+        margin: 0.3em;
+    }
+
+
+    @media screen and (min-width: 730px) {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+    }
+
+    @media screen and (min-width: 1400px) {
+        .footer {
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}

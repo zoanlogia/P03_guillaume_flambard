@@ -1,66 +1,15 @@
-.button-container {
-    text-align: center;
-    padding: 2em 0 3em 0;
-    button {
-        width: 60%;
-        @include button-purple;
-    }
-
-    button:hover {
-        transform: scale(1);
-        @include scale-hover;
-    }
-}
-
-.option-container {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 1.5em;
-    transition-property: transform;
-
-    .option-container, a:hover {
-        transform: scale(1);
-        @include option;
-        @include scale-hover;
-        background-color: $light-hover;
-       
-
-        i {
-            color: $secondary-color;
-        }
-    }
+#restaurants {
 
 
-    .option-item {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0.5em;
-        @include option;
-        @include box_shadow;
+    padding: 2.5em 0;
 
-        i,
-        strong {
-            margin: 1em;
-        }
-
-        :hover {
-            box-shadow: none;
-            cursor: pointer;
-        }
-    }
-
-}
-
-.restaurants {
     background-color: $light-grey-color;
     z-index: 1;
 
 
     h2 {
         text-align: left;
+        margin: 0 0 1em 1em;
     }
 
     .title-menu {
@@ -68,14 +17,6 @@
         justify-content: space-around;
         align-items: center;
         padding: 1.2em;
-    }
-
-    .upper {
-        text-transform: uppercase;
-        font-size: 16px;
-        margin-left: 1.5em;
-        padding-bottom: 0.3em;
-        margin-top: 1.5em;
     }
 
     hr {
@@ -104,7 +45,7 @@
     }
 }
 
-.option-container-restaurant {
+.container-restaurant {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -120,20 +61,41 @@
         @include card-img;
     }
 
-    .option-item-restaurant {
-        border-radius: 10px;
-        margin: 0.5em 0 0.5em 0em;
+    &__item {
+        border-radius: 15px;
+        margin: .7em 0 .7em 0em;
         @include box_shadow;
+
+        .new-alert {
+
+            height: 30px;
+            width: 80px;
+            background-color: $success-color;
+            color: $success-color-text;
+            position: absolute;
+            margin-left: 11em;
+            margin-top: .8em;
+            float: right;
+            border-radius: 5px;
+            padding-left: .5em;
+            padding-top: 0.3em;
+
+        }
 
         span {
             display: flex;
             justify-content: space-between;
         }
 
+
+        p {
+            padding-bottom: 0.5em;
+        }
+
         i {
             margin-right: 0.5em;
             margin-top: 1em;
-
+            font-size: 23px;
         }
 
         i:hover {
@@ -152,5 +114,40 @@
 
     img {
         @include card-img
+    }
+
+    @media screen and (min-width:730px) {
+
+        .container-restaurant {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            img {
+                width: 50%;
+            }
+        }
+    }
+
+    @media screen and (min-width:1400px) {
+        .restaurants {
+            display: flex;
+            flex-direction: column;
+
+            text-align: center;
+
+            h2 {
+                padding: 1em;
+            }
+
+            .option-item-restaurant {
+                margin-bottom: 3em;
+            }
+
+        }
+
     }
 }
