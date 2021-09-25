@@ -1,36 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@media screen and (min-width: 1400px) {
-  .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .items-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  main h2 {
-    text-align: center;
-    padding: 1em;
-  }
-
-  .items-menu {
-    justify-content: space-between;
-    align-items: center;
-  }
-  .items-menu span {
-    display: contents;
-  }
-  .items-menu span p {
-    margin: 2em;
-  }
-}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -64,20 +33,8 @@ img {
   object-fit: cover;
 }
 
-.rounded-top {
-  border-radius: 30px 30px 0 0;
-}
-
 .text-left {
   text-align: left;
-}
-
-.upper {
-  text-transform: uppercase;
-  font-size: 16px;
-  margin-left: 1.5em;
-  padding-bottom: 0.3em;
-  margin-top: 1.5em;
 }
 
 @media screen and (min-width: 730px) {
@@ -95,14 +52,6 @@ img {
 }
 #header h1 a {
   color: black;
-}
-#header .cover {
-  background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  height: 175px;
-  width: 100%;
-  background-size: cover;
-  z-index: -1;
-  margin-bottom: -1.4em;
 }
 #header section {
   width: 100%;
@@ -267,35 +216,6 @@ img {
 #restaurants {
   padding: 2.5em 0;
   background-color: #f6f6f6;
-  z-index: 1;
-}
-#restaurants h2 {
-  text-align: left;
-  margin: 0 0 1em 1em;
-}
-#restaurants .title-menu {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1.2em;
-}
-#restaurants hr {
-  height: 3px;
-  margin-left: 1.5em;
-  margin-bottom: 0.5em;
-  width: 12%;
-  color: turquoise;
-  background-color: turquoise;
-  border: none;
-}
-#restaurants .items-menu span {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 1em;
-}
-#restaurants .items-menu p,
-#restaurants .items-menu strong {
-  text-align: left;
 }
 
 .container-restaurant {
@@ -383,9 +303,6 @@ img {
   .container-restaurant .restaurants h2 {
     padding: 1em;
   }
-  .container-restaurant .restaurants .option-item-restaurant {
-    margin-bottom: 3em;
-  }
 }
 
 footer {
@@ -421,6 +338,133 @@ footer i {
     width: 100%;
     justify-content: space-around;
     align-items: center;
+  }
+}
+
+header span {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+header span i {
+  flex: 1;
+  font-size: 20px;
+  color: grey;
+}
+header span h1 {
+  flex: 11;
+  margin-right: 0.5em;
+}
+
+.cover {
+  background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  height: 175px;
+  width: 100%;
+  z-index: -3;
+  background-size: cover;
+  margin-bottom: -1em;
+}
+
+.title-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2em;
+}
+
+main {
+  border-radius: 30px 30px 0 0;
+  background-color: #f6f6f6;
+  z-index: 10;
+}
+main h2 {
+  color: grey;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-left: 1.5em;
+  padding-bottom: 0.3em;
+  margin-top: 1.5em;
+}
+main hr {
+  height: 3px;
+  margin-left: 1.5em;
+  margin-bottom: 0.5em;
+  width: 12%;
+  color: turquoise;
+  background-color: turquoise;
+  border: none;
+}
+main .container-menu {
+  background-color: #f6f6f6;
+  display: flex;
+  padding: 0.5em;
+  margin: 0.7em;
+  width: 90%;
+  border-radius: 30px;
+  box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
+  -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+  padding: 0.5em;
+}
+main .container-menu__item {
+  width: 100%;
+  padding: 0 1em;
+}
+main .items-menu span {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .button-container button {
+  margin: 2em 0 3em 0;
+  width: 50%;
+  border: none;
+  border-radius: 40px;
+  background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
+  padding: 1em 1.2em;
+  box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
+  -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+}
+main .button-container button a {
+  color: white;
+  font-size: initial;
+}
+
+@media screen and (min-width: 1400px) {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .items-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main h2 {
+    text-align: center;
+    padding: 1em;
+  }
+
+  .items-menu {
+    justify-content: space-between;
+    align-items: center;
+  }
+  .items-menu span {
+    display: contents;
+  }
+  .items-menu span p {
+    margin: 2em;
   }
 }
 

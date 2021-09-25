@@ -1,48 +1,7 @@
 #restaurants {
 
-
     padding: 2.5em 0;
-
     background-color: $light-grey-color;
-    z-index: 1;
-
-
-    h2 {
-        text-align: left;
-        margin: 0 0 1em 1em;
-    }
-
-    .title-menu {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 1.2em;
-    }
-
-    hr {
-        height: 3px;
-        margin-left: 1.5em;
-        margin-bottom: 0.5em;
-        width: 12%;
-        color: turquoise;
-        background-color: turquoise;
-        border: none;
-    }
-
-    .items-menu {
-        span {
-
-            display: flex;
-            justify-content: space-between;
-            margin: 0 1em;
-
-        }
-
-        p,
-        strong {
-            text-align: left;
-        }
-    }
 }
 
 .container-restaurant {
@@ -141,10 +100,6 @@
 
             h2 {
                 padding: 1em;
-            }
-
-            .option-item-restaurant {
-                margin-bottom: 3em;
             }
 
         }
