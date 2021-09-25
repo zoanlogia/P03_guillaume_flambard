@@ -5,15 +5,16 @@ header {
         align-items: center;
         width: 100%;
 
-        i {
+         i {
             flex: 1;
             font-size: 20px;
             color: grey;
+            margin-left: 1em;
         }
 
         h1 {
-            flex: 11;
-            margin-right: .5em;
+            flex: 1;
+            margin-right: 1.5em;
         }
     }
 }
@@ -44,6 +45,7 @@ main {
     h2 {
         color: grey;
         @include upper;
+        font-weight: 400;
     }
 
     hr {
@@ -85,11 +87,14 @@ main {
         display: flex;
         flex-direction: column;
         align-items: center;
+        // margin: 1.5em 0 2em 0 ;
 
-        button {
+        a {
             margin: 2em 0 3em 0;
+            text-align: center;
             width: 50%;
-            @include button-purple
+            @include button-purple;
+            color: white;
         }
     }
 }

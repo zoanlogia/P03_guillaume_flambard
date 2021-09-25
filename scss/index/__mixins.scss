@@ -41,6 +41,8 @@
             margin: .7em;
             @include option;
             @include box_shadow;
+            border-radius: 15px;
+            width: 95%;
 }
 
 @mixin upper {
