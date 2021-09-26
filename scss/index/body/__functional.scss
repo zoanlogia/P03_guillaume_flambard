@@ -1,10 +1,10 @@
 #functional {
 
-margin: 2.5em 0;
+    margin: 2.5em 0;
 
-h2{
-    margin: 0 0 1em 1em;
-}
+    h2 {
+        margin: 0 0 1em 1em;
+    }
 
     .option-container {
         display: flex;
@@ -12,8 +12,8 @@ h2{
         align-items: center;
         text-align: center;
         margin: 0 1.5em;
-        transition-property: transform;
         @include option;
+        cursor: pointer;
 
         :hover {
             @include scale-hover;
@@ -34,6 +34,7 @@ h2{
             margin: .7em;
             @include option;
             @include box_shadow;
+            width: 300px;
 
             .dot {
                 height: 30px;
@@ -41,17 +42,18 @@ h2{
                 background-color: $primary-color;
                 border-radius: 50%;
                 position: absolute;
-                display: inline-block;
-                margin-right: 24em;
+                margin-right: 18.5em;
                 color: white;
                 padding-top: .6em;
-              }
+            }
 
             i {
                 color: rgb(158, 151, 151);
                 font-size: 20px;
             }
-            i, strong {
+
+            i,
+            strong {
                 margin: 1em;
             }
 
@@ -78,31 +80,31 @@ h2{
         }
     }
 
+}
 
-    @media screen and (min-width: 730px) {
+@media screen and (min-width: 730px) {
 
-        .option-container {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-around;
-        }
+    .option-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
     }
+}
 
-    @media screen and (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
 
-        .option-container {
+    .option-container {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        justify-items: center;
+
+        a {
             display: flex;
-            flex-wrap: nowrap;
-            justify-content: space-between;
-            justify-items: center;
-
-            a {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
+            justify-content: center;
+            align-items: center;
         }
     }
 }

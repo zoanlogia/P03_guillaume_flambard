@@ -7,8 +7,8 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="dist/css/main.css" />
-  <link rel="stylesheet" href="dist/css/main.css.map" />
+  <link rel="stylesheet" href="../dist/css/main.css" />
+  <link rel="stylesheet" href="../dist/css/main.css.map" />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -25,7 +25,6 @@
         <h1><a href="#">Ohmyfood</a></h1>
       </span>
       <section class="cover">
-        <img src="assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="" class="cover">
       </section>
     </header>
     <main>
@@ -45,6 +44,7 @@
                   <span>
                     <p>Aux zests d'orange</p>
                     <p><strong>25€</strong></p>
+                    <i class="fas fa-check-circle" aria-hidden="true"></i>
                   </span>
                 </a>
               </div>
@@ -76,8 +76,8 @@
             <h2 class="text-left">Plats</h2>
             <hr />
             <div class="container-menu">
+              <a class="items-menu" href="#">
               <div class="container-menu__item">
-                <a class="items-menu" href="#">
                   <p><strong>Coquilles Saint-Jacques</strong></p>
                   <span>
                     <p>Accompagnées d'une purée de panais</p>
@@ -148,33 +148,35 @@
           </div>
         </div>
         <div class="button-container">
-            <a href="#">
-              Commander
-            </a>
+          <a href="#">
+            Commander
+          </a>
         </div>
       </section>
     </main>
     <footer>
       <section class="footer">
         <h2 class="font">Ohmyfood</h2>
-        <div class="container-icon">
-          <a href="#"><i class="fas fa-utensils"></i></a>
-          <a href="#">
-            <p>Proposer un restaurant</p>
-          </a>
+        <div class="container-flex">
+          <div class="col">
+            <a href="#"><i class="fas fa-utensils"></i></a>
+            <a href="#"><i class="fas fa-handshake"></i></a>
+          </div>
+          <div class="col">
+            <a href="#">
+              <p>Proposer un restaurant</p>
+            </a>
+            <a href="#">
+              <p>Devenir partenaire</p>
+            </a>
+            <a href="#">
+              <p>Mentions légales</p>
+            </a>
+            <a href="mailto: g.flambard@gmail.com">
+              <p>Contact</p>
+            </a>
+          </div>
         </div>
-        <div class="container-icon">
-          <a href="#"><i class="fas fa-handshake"></i></a>
-          <a href="#">
-            <p>Devenir partenaire</p>
-          </a>
-        </div>
-        <a href="#">
-          <p>Mentions légales</p>
-        </a>
-        <a href="#">
-          <p>Contact</p>
-        </a>
       </section>
     </footer>
   </div>

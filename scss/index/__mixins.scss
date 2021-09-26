@@ -11,9 +11,15 @@
     }
 }
 
+@mixin scale-hover {
+    transition: 0.3s;
+    transform: scale(1.01);
+    @include box_shadow_darker;
+  }
+
 @mixin option {
-    
-    width: 90%;
+
+    // width: 100%;
     border-radius: 30px;
 }
 
@@ -30,26 +36,32 @@
     -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
 }
 
+@mixin box_shadow_darker {
+    box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
+    -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
+    -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
+}
+
 @mixin rounded-top {
     border-radius: 30px 30px 0 0;
 }
 
 @mixin card-md {
     background-color: $light-grey-color;
-            display: flex;
-            padding: 0.5em;
-            margin: .7em;
-            @include option;
-            @include box_shadow;
-            border-radius: 15px;
-            width: 95%;
+    display: flex;
+    padding: 0.5em;
+    margin: .7em;
+    border-radius: 15px;
+    width: 95%;
+    @include option;
+    @include box_shadow;
 }
 
 @mixin upper {
-        text-transform: uppercase;
-        font-size: 16px;
-        margin-left: 1.5em;
-        padding-bottom: 0.3em;
-        margin-top: 1.5em;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-left: 1.5em;
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
 }
 
