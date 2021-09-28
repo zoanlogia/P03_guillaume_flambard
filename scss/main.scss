@@ -1,11 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-@import "index/_variables";
-@import 'index/_mixins';
-@import 'index/_animations';
-@import 'index/_global';
-@import 'index/header/_header';
-@import 'index/body/_functional';
-@import 'index/body/_restaurants';
-@import 'index/footer/_footer';
-@import 'menu_a_la_francaise/_menu_a_la_francaise';
+
+@import "_variables";
+@import '_mixins';
+@import '_animations';
+@import '_global';
+@import '_spinner';
+
+@import 'body/_functional';
+@import 'body/_restaurants';
+
+@import 'menu/_menu';
