@@ -61,16 +61,21 @@ header {
     .container-menu {
         padding: 0.5em;
         @include card-md;
+        background-color: white;
+        border-radius: 15px;
+        animation: ease-in 0.5s linear;
+       
 
         &__item {
             width: 100%;
             padding: 0 1em;
         }
+
     }
 
     .container-menu:hover {
-
         @include scale-hover;
+        transition-property: sliding-vertically;
     }
 
 
@@ -107,7 +112,13 @@ header {
 
 
 @media screen and (min-width: 1400px) {
-
+    
+    main {
+        h2 {
+            text-align: center;
+            padding: 1em;
+        }
+    }
     .flex-container {
         display: flex;
         flex-wrap: wrap;
@@ -116,25 +127,8 @@ header {
         width: 100%;
     }
 
-
-
     .items-menu {
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    main {
-        h2 {
-            text-align: center;
-            padding: 1em;
-        }
-    }
-
-
-
-
-    .items-menu {
         justify-content: space-between;
         align-items: center;
 

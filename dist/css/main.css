@@ -467,12 +467,14 @@ header span h1 {
   display: flex;
   padding: 0.5em;
   margin: 0.7em;
-  border-radius: 15px;
   width: 95%;
   border-radius: 30px;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+  background-color: white;
+  border-radius: 15px;
+  animation: ease-in 0.5s linear;
 }
 .menu .container-menu__item {
   width: 100%;
@@ -484,6 +486,7 @@ header span h1 {
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
+  transition-property: sliding-vertically;
 }
 .menu .items-menu span {
   display: flex;
@@ -521,6 +524,11 @@ header span h1 {
 }
 
 @media screen and (min-width: 1400px) {
+  main h2 {
+    text-align: center;
+    padding: 1em;
+  }
+
   .flex-container {
     display: flex;
     flex-wrap: wrap;
@@ -531,16 +539,6 @@ header span h1 {
 
   .items-menu {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  main h2 {
-    text-align: center;
-    padding: 1em;
-  }
-
-  .items-menu {
     justify-content: space-between;
     align-items: center;
   }
