@@ -46,6 +46,7 @@ header {
     background-color: $light-grey-color;
     z-index: 10;
 
+
     h2 {
         color: grey;
         @include upper;
@@ -63,27 +64,25 @@ header {
     }
 
     .container-menu {
+        overflow: hidden;
         padding: 0.5em;
         @include card-md;
         background-color: white;
         border-radius: 15px;
-        position: relative;
-        transition: all 0.3s;
-        overflow: hidden;
+
+        p, strong, span {
+            text-overflow: ellipsis;
+        }
 
         label {
-
             position: absolute;
             width: 100%;
             height: 100%;
-        }
-
-        .fa-check-circle {
-            visibility: hidden;
+            cursor: pointer;
         }
 
 
-        .ease { 
+        .ease {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -92,25 +91,9 @@ header {
             bottom: 0;
             position: absolute;
             width: 80px;
-            // border: 1px solid red;
             margin-right: -80px;
             background-color: #99e2d0;
             border-radius: 15px;
-            animation: slide;
-            animation-timing-function: linear;
-            animation-fill-mode: forwards;
-            animation-duration: 3ms;
-            // left: 50px;
-           
-
-        }
-        
-        #check:checked ~ #ease {
-
-            transition: transform 330ms;
-            right: 80px;
-            opacity: 1;
-
         }
 
         &__item {
@@ -121,8 +104,17 @@ header {
 
     .container-menu:hover {
         @include scale-hover;
-        transition-property: sliding-vertically;
     }
+    
+    #check:checked ~ #ease {
+        transition: 330ms ease-in-out;
+        transform: translateX(-80px);
+    }
+    
+    // #check:checked ~ p {
+    //     transition: 330ms ease-in-out;
+    //     transform: translateX(-80px);
+    // }
 
 
     .items-menu {
@@ -154,8 +146,6 @@ header {
         }
     }
 }
-
-
 
 @media screen and (min-width: 1400px) {
 
