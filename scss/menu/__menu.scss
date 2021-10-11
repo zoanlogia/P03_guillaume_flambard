@@ -7,7 +7,7 @@ header {
     span {
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 100%; 
 
         i {
             flex: 1;
@@ -26,7 +26,6 @@ header {
 .cover {
     background-image: url('../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
     height: 175px;
-    width: 100%;
     z-index: -3;
     background-size: cover;
     margin-bottom: -1em;
@@ -44,8 +43,6 @@ header {
 
     @include rounded-top;
     background-color: $light-grey-color;
-    z-index: 10;
-    width: 100%;
 
 
     h2 {
@@ -73,7 +70,7 @@ header {
         padding: 0.5em;
         background-color: white;
         border-radius: 15px;
-        width: 100%;
+        margin: .5em;
 
         label {
             position: absolute;
@@ -109,89 +106,8 @@ header {
         #check:not(:hover)~#ease {
            display: none;
         }
-        
-
-        #check2:checked~#ease2 {
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check3:checked~#ease3 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check4:checked~#ease4 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check5:checked~#ease5 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check6:checked~#ease6 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check7:checked~#ease7 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check8:checked~#ease8 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-        #check9:checked~#ease9 {
-            transition: ease;
-            transition-duration: .3s;
-            transition-delay: .3s;
-            animation-fill-mode: forwards;
-            transform: translate(-80px, 0);
-            visibility: visible;
-            opacity: 1;
-        }
-
-
 
         &__item {
-            // width: 100%;
             padding: 0 1em;
         }
     }
@@ -199,15 +115,6 @@ header {
     .container-menu:hover {
         @include scale-hover;
     }
-
-
-
-
-    // #check:checked ~ p {
-    //     transition: 330ms ease-in-out;
-    //     transform: translateX(-80px);
-    // }
-
 
     .items-menu {
 
@@ -243,13 +150,6 @@ header {
 
 
 @media screen and (min-width: 728px) {
-
-    main {
-        h2 {
-            text-align: center;
-            padding: 1em;
-        }
-    }
 
     .flex-container {
         margin: 0 5em;

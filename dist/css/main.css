@@ -28,6 +28,7 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
+  width: 100%;
   line-height: 1;
   overflow-x: hidden;
 }
@@ -313,11 +314,25 @@ img {
   right: 1em;
   top: 0;
   bottom: 0;
+  transition: all 0.3s ease-in-out;
 }
 .container-restaurant__item div span i {
   margin-right: 0.5em;
   margin-top: 1em;
   font-size: 23px;
+}
+.container-restaurant__item div .icon-full {
+  opacity: 0;
+}
+.container-restaurant__item div .icon-full :hover {
+  opacity: 1;
+}
+.container-restaurant__item div .icon-empty {
+  opacity: 1;
+}
+.container-restaurant__item div .icon-empty :hover {
+  opacity: 0;
+  color: transparent;
 }
 .container-restaurant__item p {
   padding-bottom: 0.5em;
@@ -469,7 +484,6 @@ header span h1 {
 .cover {
   background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   height: 175px;
-  width: 100%;
   z-index: -3;
   background-size: cover;
   margin-bottom: -1em;
@@ -485,8 +499,6 @@ header span h1 {
 .menu {
   border-radius: 30px 30px 0 0;
   background-color: #f6f6f6;
-  z-index: 10;
-  width: 100%;
 }
 .menu h2 {
   color: grey;
@@ -522,7 +534,7 @@ header span h1 {
   padding: 0.5em;
   background-color: white;
   border-radius: 15px;
-  width: 100%;
+  margin: 0.5em;
 }
 .menu .container-menu label {
   position: absolute;
@@ -552,75 +564,6 @@ header span h1 {
 }
 .menu .container-menu #check:not(:hover) ~ #ease {
   display: none;
-}
-.menu .container-menu #check2:checked ~ #ease2 {
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check3:checked ~ #ease3 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check4:checked ~ #ease4 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check5:checked ~ #ease5 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check6:checked ~ #ease6 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check7:checked ~ #ease7 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check8:checked ~ #ease8 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
-}
-.menu .container-menu #check9:checked ~ #ease9 {
-  transition: ease;
-  transition-duration: 0.3s;
-  transition-delay: 0.3s;
-  animation-fill-mode: forwards;
-  transform: translate(-80px, 0);
-  visibility: visible;
-  opacity: 1;
 }
 .menu .container-menu__item {
   padding: 0 1em;
@@ -668,11 +611,6 @@ header span h1 {
 }
 
 @media screen and (min-width: 728px) {
-  main h2 {
-    text-align: center;
-    padding: 1em;
-  }
-
   .flex-container {
     margin: 0 5em;
   }
