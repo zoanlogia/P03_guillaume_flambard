@@ -69,27 +69,26 @@
                 
             }
             
-            .icon-full {
-                opacity: 0;
-               
-                :hover {
-                    opacity: 1;
-                }
-            }
-            
-            .icon-empty {
-                opacity: 1;
-                
-                :hover {
-                    opacity: 0;
-                    color: transparent;
-                }
-            }
+            // .icon-full {
+            //    transition: .3 ease;
+            //    visibility: hidden;
+            // }
+
+            // .icon-empty {
+            //     :hover {
+            //         background-color: transparent;
+            //         color: transparent;
+            //         display: none;
+
+            //         .icon-full {
+            //             visibility: visible;
+            //             background-color: violet;
+            //             color: violet;
+            //         }
+            //     }
+            // }
 
         }
-
-
-
 
         p {
             padding-bottom: 0.5em;

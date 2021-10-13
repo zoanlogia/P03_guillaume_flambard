@@ -322,19 +322,6 @@ img {
   margin-top: 1em;
   font-size: 23px;
 }
-.container-restaurant__item div .icon-full {
-  opacity: 0;
-}
-.container-restaurant__item div .icon-full :hover {
-  opacity: 1;
-}
-.container-restaurant__item div .icon-empty {
-  opacity: 1;
-}
-.container-restaurant__item div .icon-empty :hover {
-  opacity: 0;
-  color: transparent;
-}
 .container-restaurant__item p {
   padding-bottom: 0.5em;
   text-align: left;
@@ -525,6 +512,7 @@ main .menu .form__part .menu-item {
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+  transition: 0.3s ease;
 }
 main .menu .form__part .menu-item label {
   position: absolute;
@@ -534,7 +522,7 @@ main .menu .form__part .menu-item label {
   height: 100%;
 }
 main .menu .form__part .menu-item__title {
-  margin-top: 0;
+  margin-top: 1em;
 }
 main .menu .form__part .menu-item__meta {
   display: flex;
@@ -576,6 +564,9 @@ main .menu .form__part .button-container {
   justify-content: center;
 }
 main .menu .form__part .button-container button {
+  box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
+  -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
   border: none;
   border-radius: 40px;
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
@@ -583,10 +574,8 @@ main .menu .form__part .button-container button {
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
-  box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
-  -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
-  -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
   color: #fff;
+  cursor: pointer;
 }
 main .menu .form__part .button-container button a {
   color: white;

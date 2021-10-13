@@ -62,7 +62,10 @@ main {
                     position: relative;
                     padding: 10px;
                     @include box_shadow;
-                    // @include box_shadow_darker;
+                    transition: .3s ease;
+
+                    
+                    
                    
 
                     label {
@@ -73,7 +76,7 @@ main {
                         height: 100%;
                     }
                     &__title {
-                        margin-top: 0;
+                        margin-top: 1em;
                     }
                     &__meta {
                         display: flex;
@@ -118,10 +121,11 @@ main {
                     justify-content: center;
                     
                     & button {
-                        @include button-purple;
                         @include box_shadow;
+                        @include button-purple;
                         color: #fff;
-    
+                        cursor: pointer;
+
                         & button:hover {
                             @include scale-hover;
                             @include box_shadow_darker;
