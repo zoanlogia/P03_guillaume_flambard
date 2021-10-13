@@ -24,6 +24,7 @@
     &__item {
         border-radius: 15px;
         margin: .7em 0 .7em 0em;
+        position: relative;
         @include box_shadow;
 
         &:hover {

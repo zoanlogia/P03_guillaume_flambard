@@ -278,6 +278,7 @@ img {
 .container-restaurant__item {
   border-radius: 15px;
   margin: 0.7em 0 0.7em 0em;
+  position: relative;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
