@@ -279,6 +279,7 @@ img {
 .container-restaurant__item {
   border-radius: 15px;
   margin: 0.7em 0 0.7em 0em;
+  position: relative;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
@@ -320,19 +321,6 @@ img {
   margin-right: 0.5em;
   margin-top: 1em;
   font-size: 23px;
-}
-.container-restaurant__item div .icon-full {
-  opacity: 0;
-}
-.container-restaurant__item div .icon-full :hover {
-  opacity: 1;
-}
-.container-restaurant__item div .icon-empty {
-  opacity: 1;
-}
-.container-restaurant__item div .icon-empty :hover {
-  opacity: 0;
-  color: transparent;
 }
 .container-restaurant__item p {
   padding-bottom: 0.5em;
@@ -480,36 +468,31 @@ header span h1 {
   flex: 1;
   margin-right: 1.5em;
 }
-
-.cover {
+header .cover {
   background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
   height: 175px;
+  width: 100%;
   z-index: -3;
   background-size: cover;
   margin-bottom: -1em;
 }
 
-.title-menu {
+main .menu__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1.2em;
 }
-
-.menu {
-  border-radius: 30px 30px 0 0;
-  background-color: #f6f6f6;
-}
-.menu h2 {
-  color: grey;
+main .menu .form__part .form__subtitle {
   text-transform: uppercase;
   font-size: 16px;
   margin-left: 1.5em;
   padding-bottom: 0.3em;
   margin-top: 1.5em;
+  color: grey;
   font-weight: 400;
 }
-.menu hr {
+main .menu .form__part hr {
   height: 3px;
   margin-left: 1.5em;
   margin-bottom: 0.5em;
@@ -518,77 +501,72 @@ header span h1 {
   background-color: turquoise;
   border: none;
 }
-.menu .container-menu {
-  background-color: #f6f6f6;
-  display: flex;
-  padding: 0.5em;
-  margin: 0.7em;
-  border-radius: 30px;
+main .menu .form__part .menu-item {
+  width: 90%;
+  max-width: 500px;
+  margin: 1em auto;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
-  padding: 0.5em;
-  background-color: white;
-  border-radius: 15px;
-  margin: 0.5em;
+  transition: 0.3s ease;
 }
-.menu .container-menu label {
+main .menu .form__part .menu-item label {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  cursor: pointer;
 }
-.menu .container-menu .ease {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+main .menu .form__part .menu-item__title {
+  margin-top: 1em;
+}
+main .menu .form__part .menu-item__meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+main .menu .form__part .menu-item__meta .menu-item__desc {
+  width: 100%;
+}
+main .menu .form__part .menu-item__meta .menu-item__price {
+  padding-right: 20px;
+}
+main .menu .form__part .menu-item input:checked + .check {
+  right: 0px;
+}
+main .menu .form__part .menu-item input:hover + .check {
+  right: 0px;
+}
+main .menu .form__part .menu-item .check {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -80px;
+  width: 80px;
   background-color: #99e2d0;
   border-radius: 15px;
-  visibility: hidden;
-  transition: 330ms ease-in-out;
-  animation-fill-mode: forwards;
-  width: 0;
-}
-.menu .container-menu #check:checked ~ #ease {
-  width: 80px;
-  transform-origin: left 50%;
-  visibility: visible;
-}
-.menu .container-menu #check:not(:hover) ~ #ease {
-  display: none;
-}
-.menu .container-menu__item {
-  padding: 0 1em;
-}
-.menu .container-menu:hover {
-  transition: 0.3s;
-  transform: scale(1.01);
-  box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
-  -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
-  -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
-}
-.menu .items-menu span {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-.menu .button-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
+  transition: 0.3s;
 }
-.menu .button-container a {
-  margin: 2em 0 3em 0;
-  text-align: center;
-  width: 50%;
+main .menu .form__part .menu-item .check .fas:before {
+  color: #fff;
+}
+main .menu .form__part .button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .menu .form__part .button-container button {
+  box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
+  -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
   border: none;
   border-radius: 40px;
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
@@ -596,36 +574,22 @@ header span h1 {
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
-  color: white;
+  color: #fff;
+  cursor: pointer;
 }
-.menu .button-container a a {
+main .menu .form__part .button-container button a {
   color: white;
   font-size: initial;
 }
-.menu .button-container a:hover {
+main .menu .form__part .button-container button button:hover {
   transition: 0.3s;
   transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
-}
-
-@media screen and (min-width: 728px) {
-  .flex-container {
-    margin: 0 5em;
-  }
-
-  .items-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .items-menu span {
-    display: contents;
-  }
-  .items-menu span p {
-    margin: 2em;
-  }
+  box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
+  -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
 }
 
 /*# sourceMappingURL=main.css.map */
