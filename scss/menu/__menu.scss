@@ -62,11 +62,9 @@ main {
                     position: relative;
                     padding: 10px;
                     @include box_shadow;
-                    transition: .3s ease;
-
-                    
-                    
-                   
+                    opacity: 0;
+                    animation-fill-mode: forwards;
+                    right: -500px;
 
                     label {
                         position: absolute;
@@ -135,5 +133,23 @@ main {
 
             }
         }
+    }
+}
+
+
+// animation menu-item
+
+@for $i from 1 through 40 {
+    .menu-item-#{$i} {
+        animation-name: displayCard;
+        animation-duration: 1s;
+        animation-delay: #{$i * 0.1}s;
+    }
+}
+
+@keyframes displayCard {
+    to {
+        right: 0;
+        opacity: 1;
     }
 }
