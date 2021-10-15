@@ -24,6 +24,7 @@
     &__item {
         border-radius: 15px;
         margin: .7em 0 .7em 0em;
+        min-height: 13em;
         position: relative;
         @include box_shadow;
 
@@ -33,10 +34,14 @@
 
         }
 
+        p {
+            margin: .5em 1em;
+        }
+
         .new-alert {
 
-            height: 30px;
-            width: 80px;
+            text-align: center;
+            padding: 6.5px;
             background-color: $success-color;
             color: $success-color-text;
             position: absolute;
@@ -44,15 +49,32 @@
             margin-top: .8em;
             float: right;
             border-radius: 5px;
-            padding-left: .5em;
-            padding-top: 0.3em;
-
+            
         }
 
         div {
             display: flex;
             justify-content: space-between;
             position: relative;
+            
+            input {
+                display: none;
+            }
+
+            i.icon-full {
+                display: none;
+                color: violet;
+            }
+
+            input:checked+label i.icon-full {
+                display: block;
+            }
+
+            input:checked+label .icon-empty {
+                display: none;
+            }
+
+           
 
             span {
                 position: absolute;
@@ -68,6 +90,7 @@
                 }
                 
             }
+
             
             // .icon-full {
             //    transition: .3 ease;
@@ -90,12 +113,7 @@
 
         }
 
-        p {
-            padding-bottom: 0.5em;
-            text-align: left;
-            margin-left: 1em;
-            margin-top: 0.5em;
-        }
+       
 
     }
 
