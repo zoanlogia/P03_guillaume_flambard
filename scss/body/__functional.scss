@@ -2,11 +2,11 @@
 
     margin: 2.5em 0;
 
-    h2 {
+   & h2 {
         margin: 0 0 1em 1em;
     }
 
-    .option-container {
+   & .option-container {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
@@ -17,11 +17,11 @@
         @include option;
         cursor: pointer;
 
-        :hover {
+       & :hover {
             @include scale-hover;
             background-color: $light-hover;
 
-            i {
+           & i {
                 color: $primary-color;
             }
         }
@@ -38,7 +38,7 @@
             @include box_shadow;
             width: 300px;
 
-            .dot {
+           & .dot {
                 height: 30px;
                 width: 30px;
                 background-color: $primary-color;
@@ -49,34 +49,34 @@
                 line-height: 30px;
             }
 
-            i {
+           & i {
                 color: rgb(158, 151, 151);
                 font-size: 20px;
             }
 
-            i,
+           & i,
             strong {
                 margin: 1em;
             }
 
-            :hover {
+           & :hover {
                 box-shadow: none;
                 cursor: pointer;
             }
         }
     }
 
-    .button-container {
+   & .button-container {
 
         text-align: center;
         padding: 2em 0 3em 0;
 
-        button {
+       & button {
             width: 60%;
             @include button-purple;
         }
 
-        button:hover {
+       & button:hover {
             transform: scale(1);
             @include scale-hover;
         }
