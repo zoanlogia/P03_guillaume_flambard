@@ -80,6 +80,7 @@ main {
 
                     label {
                         position: absolute;
+                        cursor: pointer;
                         top: 0;
                         left: 0;
                         width: 100%;
@@ -101,15 +102,28 @@ main {
 
                         .menu-item__price {
                             padding-right: 20px;
+                            animation: move .8s ease-in-out 1.5s 1 normal forwards;
                         }
                     }
 
                     input:checked+.check {
                         right: 0px;
+                        
+                        @keyframes move {
+                            to {
+                                padding-right: 80px;
+                            }
+                        }
                     }
 
                     input:hover+.check {
                         right: 0px;
+                        
+                        @keyframes move {
+                            to {
+                                padding-right: 80px;
+                            }
+                        }
                     }
 
                     .check {
@@ -131,7 +145,7 @@ main {
                         }
 
                         .ease i {
-                            animation: rotation .3s linear .3s infinite normal forwards;
+                            animation: rotation .3s ease-in-out .3s infinite normal forwards;
 
                             @keyframes rotation {
                                 to {
@@ -146,17 +160,17 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin: 2em;
-
+                    max-width: 12em;
+                    margin: 2.5em auto;
+                    
                     & button {
-                        @include box_shadow;
                         @include button-purple;
                         color: #fff;
                         cursor: pointer;
-
-                        & button:hover {
+                        width: 100%;
+                        
+                        :hover {
                             @include scale-hover;
-                            @include box_shadow_darker;
                         }
                     }
                 }
@@ -186,15 +200,15 @@ main {
 
 @media screen and (min-width:580px) {
     .menu__title {
-        justify-content: space-evenly!important;
+        justify-content: space-evenly !important;
+    }
 
-    }
     .form__subtitle {
-        margin: .5em auto!important;
+        margin: .5em auto !important;
     }
-    
+
     hr {
-        margin: auto!important;
-        text-align: center!important;
+        margin: auto !important;
+        text-align: center !important;
     }
 }
