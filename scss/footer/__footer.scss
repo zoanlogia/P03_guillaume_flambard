@@ -8,21 +8,21 @@ footer {
 
 
 
-    .font {
+   & .font {
         font-family: "Shrikhand", serif;
     }
 
-    .container-flex {
+   & .container-flex {
         display: flex;
     }
 
-    .col {
+   & .col {
 
         display: flex;
         flex-direction: column;
     }
 
-    h2,
+    & h2,
     p,
     i {
         color: white;
@@ -40,13 +40,13 @@ footer {
         display: flex;
         justify-content: space-between;
 
-        .col {
+       & .col {
             display: flex;
             flex-direction: row;
             justify-content: space-evenly;
             align-items: center;
 
-            a {
+            & a {
                 margin:0 1em;
             }
         }

@@ -85,7 +85,7 @@ img {
 
 @media screen and (min-width: 730px) {
   i {
-    font-size: 20px;
+    font-size: 1.2em;
   }
 }
 .loader {
@@ -385,6 +385,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: auto 2em;
 }
 #header .jumbotron h2 {
   font-weight: 900;
@@ -547,7 +548,7 @@ main .menu .form__part .menu-item__meta .menu-item__price {
   padding-right: 20px;
   animation: move 0.8s ease-in-out 1.5s 1 normal forwards;
 }
-main .menu .form__part .menu-item input:checked + .check {
+main .menu .form__part .menu-iteminput:checked + .check {
   right: 0px;
 }
 @keyframes move {
@@ -555,7 +556,7 @@ main .menu .form__part .menu-item input:checked + .check {
     padding-right: 80px;
   }
 }
-main .menu .form__part .menu-item input:hover + .check {
+main .menu .form__part .menu-iteminput:hover + .check {
   right: 0px;
 }
 @keyframes move {

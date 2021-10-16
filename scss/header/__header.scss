@@ -7,65 +7,67 @@
   text-align: center;
   // margin-top: 1em;
 
-  h1 a {
+ & h1 a {
     color: black;
   }
 
-  section {
+ & section {
     width: 100%;
     padding-top: 0.7em;
 
-    .location {
+   & .location {
       background: #eaeaea;
       border-top: 3px solid #e7e6e6;
       height: 90px;
+
       // background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
       // background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
       // background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-    span {
-      justify-content: center;
-    }
-    
+    &  span {
+        justify-content: center;
+      }
+
     }
 
-    p {
+   & p {
       padding: 1em 0;
       font-weight: 300;
       color: $grey-text-color;
 
-      i {
+     & i {
         padding-right: 1em;
       }
     }
   }
 
-  .jumbotron {
+ & .jumbotron {
     background-color: $light-grey-color;
     height: 275px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto 2em;
 
-    h2 {
+   & h2 {
       font-weight: 900;
       padding: 1em 0;
       margin: 0 0.5em;
     }
 
-    button {
+   & button {
       @include button-purple;
-      width:200px;
+      width: 200px;
       height: 60px;
       // margin: 2em 0;
     }
 
-    button:hover {
+   & button:hover {
       transform: scale(1);
       @include scale-hover;
     }
   }
 
-  .header-img {
+ & .header-img {
     height: 230px;
     width: 100%;
   }
