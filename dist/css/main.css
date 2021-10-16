@@ -385,12 +385,14 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: auto 2em;
 }
 #header .jumbotron h2 {
   font-weight: 900;
   padding: 1em 0;
   margin: 0 0.5em;
+}
+#header .jumbotron p {
+  margin: 0 2em;
 }
 #header .jumbotron button {
   border: none;
