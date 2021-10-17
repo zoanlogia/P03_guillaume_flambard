@@ -278,7 +278,7 @@ img {
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
 }
-.container-restaurant__item:hover {
+.container-restaurant__item :hover {
   transform: scale(1);
   transition: 0.3s;
   transform: scale(1.01);
@@ -550,7 +550,7 @@ main .menu .form__part .menu-item__meta .menu-item__price {
   padding-right: 20px;
   animation: move 0.8s ease-in-out 1.5s 1 normal forwards;
 }
-main .menu .form__part .menu-iteminput:checked + .check {
+main .menu .form__part .menu-item input:checked + .check {
   right: 0px;
 }
 @keyframes move {
@@ -558,7 +558,7 @@ main .menu .form__part .menu-iteminput:checked + .check {
     padding-right: 80px;
   }
 }
-main .menu .form__part .menu-iteminput:hover + .check {
+main .menu .form__part .menu-item input:hover + .check {
   right: 0px;
 }
 @keyframes move {
@@ -583,8 +583,19 @@ main .menu .form__part .menu-item .check {
 main .menu .form__part .menu-item .check .fas:before {
   color: #fff;
 }
-main .menu .form__part .menu-item .check .ease i {
-  animation: rotation 0.3s ease-in-out 0.3s infinite normal forwards;
+main .menu .form__part .menu-item .check .ease,
+main .menu .form__part .menu-item .check i {
+  animation-name: rotation;
+  animation-delay: 0.5s;
+  animation-timing-function: linear;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-fill-mode: forwards;
+  animation-play-state: paused;
+}
+main .menu .form__part .menu-item .check input:hover ~ .ease,
+main .menu .form__part .menu-item .check i {
+  animation-play-state: running;
 }
 @keyframes rotation {
   to {

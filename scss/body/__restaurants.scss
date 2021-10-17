@@ -28,7 +28,7 @@
         position: relative;
         @include box_shadow;
 
-        &:hover {
+        :hover {
             transform: scale(1);
             @include scale-hover;
 
@@ -66,11 +66,11 @@
                 color: $secondary-color;
             }
 
-            & input:checked+label i.icon-full {
+             input:checked+label i.icon-full {
                 display: block;
             }
 
-            & input:checked+label .icon-empty {
+             input:checked+label .icon-empty {
                 display: none;
             }
 
