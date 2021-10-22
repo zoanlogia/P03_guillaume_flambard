@@ -278,14 +278,6 @@ img {
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
 }
-.container-restaurant__item :hover {
-  transform: scale(1);
-  transition: 0.3s;
-  transform: scale(1.01);
-  box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
-  -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
-  -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
-}
 .container-restaurant__item p {
   margin: 0.5em 1em;
 }
@@ -329,6 +321,14 @@ img {
   margin-right: 0.5em;
   margin-top: 1em;
   font-size: 23px;
+}
+.container-restaurant__item:hover {
+  transform: scale(1);
+  transition: 0.3s;
+  transform: scale(1.01);
+  box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
+  -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
+  -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
 }
 .container-restaurant img {
   min-width: 270px;
