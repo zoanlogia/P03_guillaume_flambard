@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  // margin-top: 1em;
 
  & h1 a {
     color: black;
@@ -20,9 +19,6 @@
       border-top: 3px solid #e7e6e6;
       height: 90px;
 
-      // background: -moz-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-      // background: -webkit-linear-gradient(top, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
-      // background: linear-gradient(to bottom, #EAEAEA 0%, #969696 100%, #1F1F1F 100%);
     &  span {
         justify-content: center;
       }
@@ -54,14 +50,13 @@
     }
 
     & p {
-      margin: 0 2em; 
+      margin: 0 1em; 
     }
 
    & button {
       @include button-purple;
       width: 200px;
       height: 60px;
-      // margin: 2em 0;
     }
 
    & button:hover {

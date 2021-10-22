@@ -274,12 +274,9 @@ img {
   margin: 0.7em 0 0.7em 0em;
   min-height: 13em;
   position: relative;
-  box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
-  -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
-  -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+  border: 1px solid #e6e6e6;
 }
 .container-restaurant__item:hover {
-  transform: scale(1);
   transition: 0.3s;
   transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
@@ -392,7 +389,7 @@ img {
   margin: 0 0.5em;
 }
 #header .jumbotron p {
-  margin: 0 2em;
+  margin: 0 1em;
 }
 #header .jumbotron button {
   border: none;
@@ -488,6 +485,22 @@ header .cover {
   margin-bottom: -1em;
 }
 
+main input {
+  display: none;
+}
+main i.icon-full {
+  display: none;
+  color: #ff79da;
+}
+main input:checked + label i.icon-full {
+  display: block;
+}
+main input:checked + label .icon-empty {
+  display: none;
+}
+main span {
+  right: 1em;
+}
 main .menu__title {
   display: flex;
   justify-content: space-between;
@@ -527,6 +540,12 @@ main .menu .form__part .menu-item {
   animation-fill-mode: forwards;
   right: -500px;
 }
+main .menu .form__part .menu-item__desc {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
 main .menu .form__part .menu-item label {
   position: absolute;
   cursor: pointer;
@@ -534,6 +553,16 @@ main .menu .form__part .menu-item label {
   left: 0;
   width: 100%;
   height: 100%;
+}
+main .menu .form__part .menu-item:hover .check {
+  right: 0px;
+}
+main .menu .form__part .menu-item:hover .menu-item__price {
+  padding-right: 80px;
+}
+main .menu .form__part .menu-item:hover .ease {
+  transform: rotate(360deg);
+  transition: 0.5s;
 }
 main .menu .form__part .menu-item__title {
   margin-top: 1em;
@@ -543,28 +572,19 @@ main .menu .form__part .menu-item__meta {
   justify-content: space-between;
   width: 100%;
 }
-main .menu .form__part .menu-item__meta .menu-item__desc {
-  width: 100%;
-}
 main .menu .form__part .menu-item__meta .menu-item__price {
   padding-right: 20px;
-  animation: move 0.8s ease-in-out 1.5s 1 normal forwards;
+  transition: 0.3s;
 }
-main .menu .form__part .menu-iteminput:checked + .check {
+main .menu .form__part .menu-item input:checked ~ .check {
   right: 0px;
 }
-@keyframes move {
-  to {
-    padding-right: 80px;
-  }
+main .menu .form__part .menu-item input:checked ~ .menu-item__meta .menu-item__price {
+  padding-right: 80px;
 }
-main .menu .form__part .menu-iteminput:hover + .check {
-  right: 0px;
-}
-@keyframes move {
-  to {
-    padding-right: 80px;
-  }
+main .menu .form__part .menu-item input:checked ~ .check .ease {
+  transform: rotate(360deg);
+  transition: 0.5s;
 }
 main .menu .form__part .menu-item .check {
   position: absolute;
@@ -582,14 +602,6 @@ main .menu .form__part .menu-item .check {
 }
 main .menu .form__part .menu-item .check .fas:before {
   color: #fff;
-}
-main .menu .form__part .menu-item .check .ease i {
-  animation: rotation 0.3s ease-in-out 0.3s infinite normal forwards;
-}
-@keyframes rotation {
-  to {
-    transform: rotate(360deg);
-  }
 }
 main .menu .form__part .button-container {
   display: flex;

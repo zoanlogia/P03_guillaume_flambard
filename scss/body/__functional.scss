@@ -17,7 +17,7 @@
         @include option;
         cursor: pointer;
 
-       & :hover {
+        :hover {
             @include scale-hover;
             background-color: $light-hover;
 
@@ -59,7 +59,7 @@
                 margin: 1em;
             }
 
-           & :hover {
+            :hover {
                 box-shadow: none;
                 cursor: pointer;
             }
@@ -76,7 +76,7 @@
             @include button-purple;
         }
 
-       & button:hover {
+        button:hover {
             transform: scale(1);
             @include scale-hover;
         }
