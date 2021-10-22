@@ -26,16 +26,19 @@
         margin: .7em 0 .7em 0em;
         min-height: 13em;
         position: relative;
-        @include box_shadow;
+        border: 1px solid rgb(230, 230, 230);
 
-
+        &:hover {
+            @include scale-hover;
+        }
         
+
         & p {
             margin: .5em 1em;
         }
-        
+
         & .new-alert {
-            
+
             text-align: center;
             padding: 6.5px;
             background-color: $success-color;
@@ -45,40 +48,40 @@
             margin-top: .8em;
             float: right;
             border-radius: 5px;
-            
+
         }
-        
+
         & div {
             display: flex;
             justify-content: space-between;
             position: relative;
-            
+
             & input {
                 display: none;
             }
-            
+
             & i.icon-full {
                 display: none;
                 color: $secondary-color;
             }
-            
-            input:checked+label i.icon-full {
+
+             input:checked+label i.icon-full {
                 display: block;
             }
-            
-            input:checked+label .icon-empty {
+
+             input:checked+label .icon-empty {
                 display: none;
             }
-            
-            
-            
+
+
+
             & span {
                 position: absolute;
                 right: 1em;
                 top: 0;
                 bottom: 0;
                 transition: all .3s ease-in-out;
-                
+
                 & i {
                     margin-right: 0.5em;
                     margin-top: 1em;
@@ -86,12 +89,6 @@
                 }
             }
         }
-    }
-
-    &__item:hover {
-        transform: scale(1);
-        @include scale-hover;
-
     }
 
 

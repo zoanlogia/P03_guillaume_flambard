@@ -29,24 +29,28 @@
 
     <main>
       <section class="menu">
-        <span class="menu__title">
-          <h1>La palette du goût</h1>
-          <i class="far fa-heart fa-1x"></i>
-        </span>
-
         <form class="form" action="">
+          <div class="menu__title">
+            <h1>La palette du goût</h1>
+            <input type="checkbox" id="heart5">
+            <label for="heart5">
+              <span class="icon-full"><i class="icon-full fas fa-heart fa-1x"></i></span>
+              <span class="icon-empty"> <i class=" far fa-heart fa-1x"></i></span>
+            </label>
+          </div>
+
           <div class="form__part">
             <h2 class="form__subtitle">Entrées</h2>
             <hr />
 
             <div class="menu-item menu-item-1">
               <label for="check1"></label>
+              <input id="check1" type="checkbox" hidden>
               <p class="menu-item__title"><strong>Fricassée d'escargot</strong></p>
               <div class="menu-item__meta">
                 <p class="menu-item__desc">Au piment d'espelette</p>
                 <p class="menu-item__price"><strong>25€</strong></p>
               </div>
-              <input id="check1" type="checkbox" hidden>
               <div class="check">
                 <div class="ease">
                   <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -56,12 +60,12 @@
 
             <div class="menu-item menu-item-2">
               <label for="check2"></label>
+              <input id="check2" type="checkbox" hidden>
               <p class="menu-item__title"><strong>Foie gras de canard mi-cuit</strong></p>
               <div class="menu-item__meta">
                 <p class="menu-item__desc">Et ses copeaux de truffe noire</p>
                 <p class="menu-item__price"><strong>35€</strong></p>
               </div>
-              <input id="check2" type="checkbox" hidden>
               <div class="check">
                 <div class="ease">
                   <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -71,12 +75,12 @@
 
             <div class="menu-item menu-item-3">
               <label for="check3"></label>
+              <input id="check3" type="checkbox" hidden>
               <p class="menu-item__title"><strong>Oeuf au plat</strong></p>
               <div class="menu-item__meta">
                 <p class="menu-item__desc">Assaisonné à la truffe sur lit de légumes</p>
                 <p class="menu-item__price"><strong>20€</strong></p>
               </div>
-              <input id="check3" type="checkbox" hidden>
               <div class="check">
                 <div class="ease">
                   <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -90,12 +94,12 @@
 
               <div class="menu-item menu-item-4">
                 <label for="check4"></label>
+                <input id="check4" type="checkbox" hidden>
                 <p class="menu-item__title"><strong>Filet de boeuf aux herbes</strong></p>
                 <div class="menu-item__meta">
                   <p class="menu-item__desc">Accompagné de sa ribambelle de légumes</p>
                   <p class="menu-item__price"><strong>40€</strong></p>
                 </div>
-                <input id="check4" type="checkbox" hidden>
                 <div class="check">
                   <div class="ease">
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -104,12 +108,12 @@
               </div>
               <div class="menu-item menu-item-5">
                 <label for="check5"></label>
+                <input id="check5" type="checkbox" hidden>
                 <p class="menu-item__title"><strong>Parmentier de queue de boeuf</strong></p>
                 <div class="menu-item__meta">
                   <p class="menu-item__desc">À la truffe noire sur purée de panais</p>
                   <p class="menu-item__price"><strong>35€</strong></p>
                 </div>
-                <input id="check5" type="checkbox" hidden>
                 <div class="check">
                   <div class="ease">
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -118,12 +122,12 @@
               </div>
               <div class="menu-item menu-item-6">
                 <label for="check6"></label>
+                <input id="check6" type="checkbox" hidden>
                 <p class="menu-item__title"><strong>Filet de Turbot</strong></p>
                 <div class="menu-item__meta">
                   <p class="menu-item__desc">Aux agrumes</p>
                   <p class="menu-item__price"><strong>44€</strong></p>
                 </div>
-                <input id="check6" type="checkbox" hidden>
                 <div class="check">
                   <div class="ease">
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -140,12 +144,12 @@
 
               <div class="menu-item menu-item-7">
                 <label for="check7"></label>
+                <input id="check7" type="checkbox" hidden>
                 <p class="menu-item__title"><strong>Paris-Brest</strong></p>
                 <div class="menu-item__meta">
                   <p class="menu-item__desc">Revisité</p>
                   <p class="menu-item__price"><strong>18€</strong></p>
                 </div>
-                <input id="check7" type="checkbox" hidden>
                 <div class="check">
                   <div class="ease">
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -154,12 +158,12 @@
               </div>
               <div class="menu-item menu-item-8">
                 <label for="check8"></label>
+                <input id="check8" type="checkbox" hidden>
                 <p class="menu-item__title"><strong>Macaron au chocolat d'exception</strong></p>
                 <div class="menu-item__meta">
                   <p class="menu-item__desc">Et glace à la vanille de Madagascar</p>
                   <p class="menu-item__price"><strong>22€</strong></p>
                 </div>
-                <input id="check8" type="checkbox" hidden>
                 <div class="check">
                   <div class="ease">
                     <i class="fas fa-check-circle" aria-hidden="true"></i>
@@ -168,12 +172,12 @@
               </div>
               <div class="menu-item menu-item-9">
                 <label for="check9"></label>
+                <input id="check9" type="checkbox" hidden>
                 <p class="menu-item__title"><strong>Mousse au chocolat</strong></p>
                 <div class="menu-item__meta">
                   <p class="menu-item__desc">Au piment d'espelette et à la truffe noire</p>
                   <p class="menu-item__price"><strong>23€</strong></p>
                 </div>
-                <input id="check9" type="checkbox" hidden>
                 <div class="check">
                   <div class="ease">
                     <i class="fas fa-check-circle" aria-hidden="true"></i>

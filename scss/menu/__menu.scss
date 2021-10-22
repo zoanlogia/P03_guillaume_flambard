@@ -1,5 +1,6 @@
 @import '../header/_header';
 @import '../footer/_footer';
+@import '../_variables';
 
 header {
 
@@ -33,6 +34,29 @@ header {
 }
 
 main {
+
+    input {
+        display: none;
+    }
+
+    & i.icon-full {
+        display: none;
+        color: $secondary-color;
+    }
+
+    input:checked+label i.icon-full {
+        display: block;
+    }
+
+    input:checked+label .icon-empty {
+        display: none;
+    }
+
+    & span {
+        right: 1em;
+    }
+
+
 
     & .menu {
 
@@ -76,6 +100,12 @@ main {
                     animation-fill-mode: forwards;
                     right: -500px;
 
+                    &__desc {
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        width: 100%;
+                    }
 
                     & label {
                         position: absolute;
@@ -84,6 +114,19 @@ main {
                         left: 0;
                         width: 100%;
                         height: 100%;
+                    }
+
+                    &:hover .check {
+                        right: 0px;
+                    }
+
+                    &:hover .menu-item__price {
+                        padding-right: 80px;
+                    }
+
+                    &:hover .ease {
+                        transform: rotate(360deg);
+                        transition: 0.5s;
                     }
 
                     &__title {
@@ -95,34 +138,23 @@ main {
                         justify-content: space-between;
                         width: 100%;
 
-                        & .menu-item__desc {
-                            width: 100%;
-                        }
-
                         & .menu-item__price {
                             padding-right: 20px;
-                            animation: move .8s ease-in-out 1.5s 1 normal forwards;
+                            transition: 0.3s;
                         }
                     }
 
-                    input:checked+.check {
+                    input:checked~.check {
                         right: 0px;
-
-                        @keyframes move {
-                            to {
-                                padding-right: 80px;
-                            }
-                        }
                     }
 
-                    input:hover+.check {
-                        right: 0px;
+                    input:checked~.menu-item__meta .menu-item__price {
+                        padding-right: 80px;
+                    }
 
-                        @keyframes move {
-                            to {
-                                padding-right: 80px;
-                            }
-                        }
+                    input:checked~.check .ease {
+                        transform: rotate(360deg);
+                        transition: 0.5s;
                     }
 
                     & .check {
@@ -142,38 +174,6 @@ main {
                         & .fas:before {
                             color: #fff;
                         }
-
-                        .ease,
-                        i {
-                            animation-name: rotation;
-                            animation-delay: .5s;
-                            animation-timing-function: linear;
-                            animation-duration: .5s;
-                            animation-iteration-count: infinite;
-                            animation-fill-mode: forwards;
-                            animation-play-state: paused;
-                        }
-
-                        input:hover~.ease,
-                        i {
-                            animation-play-state: running;
-
-                            @keyframes rotation {
-                                to {
-                                    transform: rotate(360deg);
-                                }
-                            }
-                        }
-
-                        // input:checked ~ .ease, i {
-                        //     animation-play-state: paused;    
-                        //     @keyframes rotation {
-                        //         to {
-                        //             transform: rotate(0deg);
-                        //         }
-                        //     }
-                        // }
-
                     }
                 }
 
