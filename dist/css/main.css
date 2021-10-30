@@ -173,6 +173,7 @@ img {
   color: #9356dc;
 }
 #functional .option-container__item {
+  position: relative;
   background-color: #f6f6f6;
   display: flex;
   flex-direction: row;
@@ -187,12 +188,12 @@ img {
   width: 300px;
 }
 #functional .option-container__item .dot {
+  left: -1em;
   height: 30px;
   width: 30px;
   background-color: #9356dc;
   border-radius: 50%;
   position: absolute;
-  margin-right: 19em;
   color: white;
   line-height: 30px;
 }
