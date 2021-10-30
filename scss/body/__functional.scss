@@ -27,6 +27,7 @@
         }
 
         &__item {
+            position: relative;
             background-color: $light-grey-color;
             display: flex;
             flex-direction: row;
@@ -39,12 +40,12 @@
             width: 300px;
 
            & .dot {
+               left: -1em;
                 height: 30px;
                 width: 30px;
                 background-color: $primary-color;
                 border-radius: 50%;
                 position: absolute;
-                margin-right: 19em;
                 color: white;
                 line-height: 30px;
             }
