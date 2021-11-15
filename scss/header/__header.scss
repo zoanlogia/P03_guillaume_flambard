@@ -1,13 +1,13 @@
 #header {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 
- & h1 a {
+ & h1 {
     color: black;
+    margin-top: .3em;
   }
 
  & section {
@@ -17,7 +17,7 @@
    & .location {
       background: #eaeaea;
       border-top: 3px solid #e7e6e6;
-      height: 90px;
+      height: 65px;
 
     &  span {
         justify-content: center;
