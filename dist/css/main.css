@@ -1,16 +1,43 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
-* {
-  box-sizing: border-box;
-  padding: 0;
+html, body, div, span, applet, object, iframe,
+pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
 }
 
 body {
   width: 100%;
   line-height: 1;
   overflow-x: hidden;
-  font-family: "Roboto", serif;
 }
 
 ol, ul {
@@ -51,6 +78,10 @@ a {
   color: black;
 }
 
+body {
+  font-family: "Roboto", serif;
+}
+
 img {
   width: 100%;
 }
@@ -69,16 +100,24 @@ img {
   height: 100%;
   z-index: -1;
   position: fixed;
-  animation-duration: 1s;
-  animation-name: loader;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: loader;
+          animation-name: loader;
 }
 .loader__item {
   position: relative;
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .loader__item--circle {
   position: fixed;
@@ -87,24 +126,59 @@ img {
   border-radius: 50%;
   border: 10px solid white;
   border-bottom-color: transparent;
-  animation-duration: 3s;
-  animation-name: circle;
-  animation-timing-function: linear;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-name: circle;
+          animation-name: circle;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
   visibility: hidden;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    visibility: visible;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  99% {
+    visibility: visible;
+    -webkit-transform: rotate(1000deg);
+            transform: rotate(1000deg);
+  }
+  100% {
+    z-index: -1;
+    visibility: hidden;
+  }
 }
 
 @keyframes circle {
   0% {
     visibility: visible;
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   99% {
     visibility: visible;
-    transform: rotate(1000deg);
+    -webkit-transform: rotate(1000deg);
+            transform: rotate(1000deg);
   }
   100% {
     z-index: -1;
     visibility: hidden;
+  }
+}
+@-webkit-keyframes loader {
+  0% {
+    background-color: #9356dc;
+    z-index: 2;
+  }
+  99% {
+    z-index: 2;
+    background-color: #9356dc;
+  }
+  100% {
+    z-index: -1;
   }
 }
 @keyframes loader {
@@ -127,19 +201,30 @@ img {
   margin: 0 0 1em 1em;
 }
 #functional .option-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   width: 100%;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
   margin: 0 auto;
   border-radius: 30px;
   cursor: pointer;
 }
 #functional .option-container :hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
@@ -151,10 +236,19 @@ img {
 #functional .option-container__item {
   position: relative;
   background-color: #f6f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 0.5em;
   margin: 0.7em;
   border-radius: 30px;
@@ -182,7 +276,8 @@ img {
   margin: 1em;
 }
 #functional .option-container__item :hover {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   cursor: pointer;
 }
 #functional .button-container {
@@ -193,6 +288,8 @@ img {
   width: 60%;
   border: none;
   border-radius: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(85%, #572096));
+  background: -o-linear-gradient(left, #ff79da 0%, #572096 85%);
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
   padding: 1em 1.2em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
@@ -204,9 +301,15 @@ img {
   font-size: initial;
 }
 #functional .button-container button:hover {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
@@ -214,8 +317,13 @@ img {
 
 @media screen and (min-width: 768px) {
   .option-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .option-container__item {
     margin: 0 2em;
@@ -234,16 +342,22 @@ img {
 }
 
 .container-restaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: left;
 }
 .container-restaurant img {
   min-width: 270px;
   max-height: 135px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 .container-restaurant__item {
@@ -254,8 +368,12 @@ img {
   border: 1px solid #e6e6e6;
 }
 .container-restaurant__item:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
@@ -275,8 +393,12 @@ img {
   border-radius: 5px;
 }
 .container-restaurant__item div {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   position: relative;
 }
 .container-restaurant__item div input {
@@ -297,6 +419,8 @@ img {
   right: 1em;
   top: 0;
   bottom: 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .container-restaurant__item div span i {
@@ -307,7 +431,8 @@ img {
 .container-restaurant img {
   min-width: 270px;
   max-height: 135px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 15px 15px 0 0;
 }
 
@@ -324,15 +449,23 @@ img {
   }
 }
 #header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
-#header h1 {
+#header h1 a {
   color: black;
-  margin-top: 0.3em;
 }
 #header section {
   width: 100%;
@@ -341,10 +474,12 @@ img {
 #header section .location {
   background: #eaeaea;
   border-top: 3px solid #e7e6e6;
-  height: 65px;
+  height: 90px;
 }
 #header section .location span {
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 #header section p {
   padding: 1em 0;
@@ -357,9 +492,16 @@ img {
 #header .jumbotron {
   background-color: #f6f6f6;
   height: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 #header .jumbotron h2 {
   font-weight: 900;
@@ -372,6 +514,8 @@ img {
 #header .jumbotron button {
   border: none;
   border-radius: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(85%, #572096));
+  background: -o-linear-gradient(left, #ff79da 0%, #572096 85%);
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
   padding: 1em 1.2em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
@@ -385,9 +529,15 @@ img {
   font-size: initial;
 }
 #header .jumbotron button:hover {
-  transform: scale(1);
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
@@ -408,11 +558,18 @@ footer .font {
   font-family: "Shrikhand", serif;
 }
 footer .container-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 footer .col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 footer h2,
 footer p,
@@ -426,32 +583,53 @@ footer i {
 
 @media screen and (min-width: 768px) {
   .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   .footer .col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .footer .col a {
     margin: 0 1em;
   }
 }
 header span {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 header span i {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 20px;
   color: grey;
   margin-left: 1em;
 }
 header span h1 {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-right: 1.5em;
 }
 header .cover {
@@ -480,9 +658,15 @@ main span {
   right: 1em;
 }
 main .menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 1.2em;
 }
 main .menu .form__part .form__subtitle {
@@ -515,13 +699,15 @@ main .menu .form__part .menu-item {
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
   opacity: 0;
-  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   right: -500px;
 }
 main .menu .form__part .menu-item__desc {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
   width: 100%;
 }
 main .menu .form__part .menu-item label {
@@ -539,19 +725,29 @@ main .menu .form__part .menu-item:hover .menu-item__price {
   padding-right: 80px;
 }
 main .menu .form__part .menu-item:hover .ease {
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 main .menu .form__part .menu-item__title {
   margin-top: 1em;
 }
 main .menu .form__part .menu-item__meta {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 main .menu .form__part .menu-item__meta .menu-item__price {
   padding-right: 20px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 main .menu .form__part .menu-item input:checked ~ .check {
@@ -561,7 +757,11 @@ main .menu .form__part .menu-item input:checked ~ .menu-item__meta .menu-item__p
   padding-right: 80px;
 }
 main .menu .form__part .menu-item input:checked ~ .check .ease {
-  transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+      -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
 }
 main .menu .form__part .menu-item .check {
@@ -572,25 +772,43 @@ main .menu .form__part .menu-item .check {
   width: 80px;
   background-color: #99e2d0;
   border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
 }
 main .menu .form__part .menu-item .check .fas:before {
   color: #fff;
 }
 main .menu .form__part .button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 12em;
   margin: 2.5em auto;
 }
 main .menu .form__part .button-container button {
   border: none;
   border-radius: 40px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff79da), color-stop(85%, #572096));
+  background: -o-linear-gradient(left, #ff79da 0%, #572096 85%);
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
   padding: 1em 1.2em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
@@ -605,251 +823,382 @@ main .menu .form__part .button-container button a {
   font-size: initial;
 }
 main .menu .form__part .button-container button :hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
   transition: 0.3s;
-  transform: scale(1.01);
+  -webkit-transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
   box-shadow: 2px 1px 10px 1px rgba(80, 75, 75, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(78, 70, 70, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(66, 61, 61, 0.171);
 }
 
 .menu-item-1 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.1s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 
 .menu-item-2 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.2s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 
 .menu-item-3 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.3s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 
 .menu-item-4 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.4s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 
 .menu-item-5 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.5s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .menu-item-6 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.6s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 
 .menu-item-7 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.7s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
 }
 
 .menu-item-8 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.8s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .menu-item-9 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 0.9s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .menu-item-10 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .menu-item-11 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.1s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
 }
 
 .menu-item-12 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.2s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
 }
 
 .menu-item-13 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.3s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
 }
 
 .menu-item-14 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.4s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.4s;
+          animation-delay: 1.4s;
 }
 
 .menu-item-15 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.5s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 
 .menu-item-16 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.6s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.6s;
+          animation-delay: 1.6s;
 }
 
 .menu-item-17 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.7s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
 }
 
 .menu-item-18 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.8s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.8s;
+          animation-delay: 1.8s;
 }
 
 .menu-item-19 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 1.9s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
 }
 
 .menu-item-20 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
 }
 
 .menu-item-21 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.1s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
 }
 
 .menu-item-22 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.2s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.2s;
+          animation-delay: 2.2s;
 }
 
 .menu-item-23 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.3s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
 }
 
 .menu-item-24 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.4s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.4s;
+          animation-delay: 2.4s;
 }
 
 .menu-item-25 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.5s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
 }
 
 .menu-item-26 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.6s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.6s;
+          animation-delay: 2.6s;
 }
 
 .menu-item-27 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.7s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.7s;
+          animation-delay: 2.7s;
 }
 
 .menu-item-28 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.8s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.8s;
+          animation-delay: 2.8s;
 }
 
 .menu-item-29 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 2.9s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 2.9s;
+          animation-delay: 2.9s;
 }
 
 .menu-item-30 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
 }
 
 .menu-item-31 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.1s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.1s;
+          animation-delay: 3.1s;
 }
 
 .menu-item-32 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.2s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.2s;
+          animation-delay: 3.2s;
 }
 
 .menu-item-33 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.3s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.3s;
+          animation-delay: 3.3s;
 }
 
 .menu-item-34 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.4s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.4s;
+          animation-delay: 3.4s;
 }
 
 .menu-item-35 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.5s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
 }
 
 .menu-item-36 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.6s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.6s;
+          animation-delay: 3.6s;
 }
 
 .menu-item-37 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.7s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.7s;
+          animation-delay: 3.7s;
 }
 
 .menu-item-38 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.8s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.8s;
+          animation-delay: 3.8s;
 }
 
 .menu-item-39 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 3.9s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 3.9s;
+          animation-delay: 3.9s;
 }
 
 .menu-item-40 {
-  animation-name: displayCard;
-  animation-duration: 1s;
-  animation-delay: 4s;
+  -webkit-animation-name: displayCard;
+          animation-name: displayCard;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+
+@-webkit-keyframes displayCard {
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
 
 @keyframes displayCard {
@@ -860,7 +1209,9 @@ main .menu .form__part .button-container button :hover {
 }
 @media screen and (min-width: 580px) {
   .menu__title {
-    justify-content: space-evenly !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
   }
 
   .form__subtitle {
@@ -872,5 +1223,3 @@ main .menu .form__part .button-container button :hover {
     text-align: center !important;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
