@@ -309,7 +309,9 @@ img {
 }
 .container-restaurant__item div i.icon-full {
   display: none;
-  color: #ff79da;
+  background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .container-restaurant__item div input:checked + label i.icon-full {
   display: block;
@@ -483,7 +485,9 @@ main input {
 }
 main i.icon-full {
   display: none;
-  color: #ff79da;
+  background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main input:checked + label i.icon-full {
   display: block;
@@ -519,13 +523,12 @@ main .menu .form__part hr {
   border: none;
 }
 main .menu .form__part .menu-item {
-  width: 90%;
   max-width: 500px;
-  margin: 1em auto;
+  margin: 0.5em;
   border-radius: 15px;
   overflow: hidden;
   position: relative;
-  padding: 10px;
+  padding: 0 1em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
@@ -586,7 +589,7 @@ main .menu .form__part .menu-item .check {
   right: -80px;
   width: 80px;
   background-color: #99e2d0;
-  border-radius: 15px;
+  border-radius: 0 15px 15px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;

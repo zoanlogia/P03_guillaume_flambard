@@ -63,7 +63,10 @@
 
             & i.icon-full {
                 display: none;
-                color: $secondary-color;
+                background: $gradiant-purple;
+                // Ici le webkit est obligatoire pour insérer un gradient en color
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
 
              input:checked+label i.icon-full {
