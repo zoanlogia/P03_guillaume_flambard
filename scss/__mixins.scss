@@ -24,6 +24,8 @@
 }
 
 @mixin card-img {
+    min-width: 270px;
+    max-height: 135px;
     object-fit: cover;
     border-radius: 15px 15px 0 0;
 }
