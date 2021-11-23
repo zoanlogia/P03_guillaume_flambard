@@ -244,10 +244,6 @@ img {
   .option-container__item {
     margin: 0 2em;
   }
-
-  h2 {
-    text-align: center;
-  }
 }
 #restaurants {
   padding: 2.5em 0;
@@ -523,7 +519,6 @@ main .menu .form__part hr {
   border: none;
 }
 main .menu .form__part .menu-item {
-  max-width: 500px;
   margin: 0.5em;
   border-radius: 15px;
   overflow: hidden;
@@ -876,18 +871,17 @@ main .menu .form__part .button-container button :hover {
     opacity: 1;
   }
 }
-@media screen and (min-width: 580px) {
-  .menu__title {
-    justify-content: space-evenly !important;
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
-  .form__subtitle {
-    margin: 0.5em auto !important;
-  }
-
-  hr {
-    margin: auto !important;
-    text-align: center !important;
+  .form {
+    margin: 0 25%;
   }
 }
 
