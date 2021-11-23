@@ -4,32 +4,33 @@
     background-color: $light-grey-color;
 
     & h2 {
-
         margin: 0 0 1em 1em;
-
     }
 }
 
 .container-restaurant {
     display: flex;
-    // flex-wrap: wrap;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: left;
+    margin: 0 1em;
 
-    & img {
-        @include card-img;
-    }
-
+    
     &__item {
         border-radius: 15px;
         margin: .7em 0 .7em 0em;
         min-height: 13em;
         position: relative;
         border: 1px solid rgb(230, 230, 230);
-
+        
         &:hover {
             @include scale-hover;
+        }
+        & img {
+            @include card-img;
+            max-height: 155px;
+            width: 270px;
         }
         
 
@@ -90,25 +91,15 @@
             }
         }
     }
-
-
-    & img {
-        @include card-img
-    }
-
 }
 
 
 @media screen and (min-width:580px) {
 
     .container-restaurant {
-
+    
         &__item {
             margin: 1em;
-        }
-
-        & img {
-            width: 50%;
         }
     }
 
