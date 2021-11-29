@@ -2,17 +2,17 @@
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   text-align: center;
 
   & h1 a {
     color: black;
+    font-weight: 300;
   }
 
   & section {
     width: 100%;
-    padding-top: 0.7em;
 
     & .location {
       display: flex;
@@ -21,7 +21,11 @@
       justify-content: center;
       background: #eaeaea;
       border-top: 3px solid #e7e6e6;
-      height: 90px;
+      height: 50px;
+
+      & h2 {
+        margin: 2em 0;
+      }
 
      & a {
         display: flex;
@@ -38,10 +42,6 @@
       padding: 1em 0;
       font-weight: 300;
       color: $grey-text-color;
-
-      & i {
-        padding-right: 1em;
-      }
     }
   }
 
@@ -64,8 +64,9 @@
 
     & button {
       @include button-purple;
-      width: 200px;
-      height: 60px;
+      margin-top: .8em;
+      padding: 1.1em;
+      font-weight: 500;
     }
 
     & button:hover {

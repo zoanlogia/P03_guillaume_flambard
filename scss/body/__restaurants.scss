@@ -4,7 +4,7 @@
     background-color: $light-grey-color;
 
     & h2 {
-        margin: 0 0 1em 1em;
+        margin: .8em;
     }
 }
 
@@ -18,11 +18,12 @@
 
     
     &__item {
-        border-radius: 15px;
+        border-radius: 10px;
         margin: .7em 0 .7em 0em;
         min-height: 13em;
         position: relative;
         border: 1px solid rgb(230, 230, 230);
+        min-width: 280px;
         
         &:hover {
             @include scale-hover;
@@ -48,7 +49,8 @@
             margin-left: 11em;
             margin-top: .8em;
             float: right;
-            border-radius: 5px;
+            border-radius: 2px;
+            font-size: .8em;
 
         }
 

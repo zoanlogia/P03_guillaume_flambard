@@ -1,9 +1,8 @@
 #functional {
-
-    margin: 2.5em 0;
-
+height: 60vh;
    & h2 {
-        margin: 0 0 1em 1em;
+        margin: 1.5em 0 .5em 1em;
+        font-size: 1.4em;
     }
 
    & .option-container {
@@ -33,21 +32,21 @@
             flex-direction: row;
             justify-content: center;
             align-items: center;
-            padding: 0.5em;
-            margin: .7em;
+            padding: 0.2em;
+            margin: 1em;
             @include option;
             @include box_shadow;
             width: 300px;
 
            & .dot {
                left: -1em;
-                height: 30px;
-                width: 30px;
+                height: 25px;
+                width: 25px;
                 background-color: $primary-color;
                 border-radius: 50%;
                 position: absolute;
                 color: white;
-                line-height: 30px;
+                line-height: 25px;
             }
 
            & i {
@@ -82,7 +81,6 @@
             @include scale-hover;
         }
     }
-
 }
 
 @media screen and (min-width: 768px) {

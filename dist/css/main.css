@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/** @format */
 html, body, div, span, applet, object, iframe,
 pre,
 a, abbr, acronym, address, big, cite, code,
@@ -145,10 +146,11 @@ img {
   }
 }
 #functional {
-  margin: 2.5em 0;
+  height: 60vh;
 }
 #functional h2 {
-  margin: 0 0 1em 1em;
+  margin: 1.5em 0 0.5em 1em;
+  font-size: 1.4em;
 }
 #functional .option-container {
   display: flex;
@@ -158,7 +160,7 @@ img {
   align-items: center;
   text-align: center;
   margin: 0 auto;
-  border-radius: 30px;
+  border-radius: 25px;
   cursor: pointer;
 }
 #functional .option-container :hover {
@@ -179,9 +181,9 @@ img {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 0.5em;
-  margin: 0.7em;
-  border-radius: 30px;
+  padding: 0.2em;
+  margin: 1em;
+  border-radius: 25px;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
@@ -189,13 +191,13 @@ img {
 }
 #functional .option-container__item .dot {
   left: -1em;
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background-color: #9356dc;
   border-radius: 50%;
   position: absolute;
   color: white;
-  line-height: 30px;
+  line-height: 25px;
 }
 #functional .option-container__item i {
   color: #9e9797;
@@ -218,14 +220,11 @@ img {
   border: none;
   border-radius: 40px;
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
-  padding: 1em 1.2em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
-}
-#functional .button-container button a {
   color: white;
-  font-size: initial;
+  font-size: 1em;
 }
 #functional .button-container button:hover {
   transform: scale(1);
@@ -254,7 +253,7 @@ img {
   background-color: #f6f6f6;
 }
 #restaurants h2 {
-  margin: 0 0 1em 1em;
+  margin: 0.8em;
 }
 
 .container-restaurant {
@@ -266,11 +265,12 @@ img {
   margin: 0 1em;
 }
 .container-restaurant__item {
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 0.7em 0 0.7em 0em;
   min-height: 13em;
   position: relative;
   border: 1px solid #e6e6e6;
+  min-width: 280px;
 }
 .container-restaurant__item:hover {
   transition: 0.3s;
@@ -281,7 +281,8 @@ img {
 }
 .container-restaurant__item img {
   object-fit: cover;
-  border-radius: 15px 15px 0 0;
+  min-width: 280px;
+  border-radius: 10px 10px 0 0;
   max-height: 155px;
   width: 270px;
 }
@@ -297,7 +298,8 @@ img {
   margin-left: 11em;
   margin-top: 0.8em;
   float: right;
-  border-radius: 5px;
+  border-radius: 2px;
+  font-size: 0.8em;
 }
 .container-restaurant__item div {
   display: flex;
@@ -344,16 +346,16 @@ img {
 #header {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
   text-align: center;
 }
 #header h1 a {
   color: black;
+  font-weight: 300;
 }
 #header section {
   width: 100%;
-  padding-top: 0.7em;
 }
 #header section .location {
   display: flex;
@@ -362,7 +364,10 @@ img {
   justify-content: center;
   background: #eaeaea;
   border-top: 3px solid #e7e6e6;
-  height: 90px;
+  height: 50px;
+}
+#header section .location h2 {
+  margin: 2em 0;
 }
 #header section .location a {
   display: flex;
@@ -376,9 +381,6 @@ img {
   padding: 1em 0;
   font-weight: 300;
   color: #302d2d;
-}
-#header section p i {
-  padding-right: 1em;
 }
 #header .jumbotron {
   background-color: #f6f6f6;
@@ -399,16 +401,14 @@ img {
   border: none;
   border-radius: 40px;
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
-  padding: 1em 1.2em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
-  width: 200px;
-  height: 60px;
-}
-#header .jumbotron button a {
   color: white;
-  font-size: initial;
+  font-size: 1em;
+  margin-top: 0.8em;
+  padding: 1.1em;
+  font-weight: 500;
 }
 #header .jumbotron button:hover {
   transform: scale(1);
@@ -533,7 +533,8 @@ main .menu .form__part hr {
 }
 main .menu .form__part .menu-item {
   margin: 0.5em;
-  border-radius: 15px;
+  height: 3.5em;
+  border-radius: 12px;
   overflow: hidden;
   position: relative;
   padding: 0 1em;
@@ -569,12 +570,16 @@ main .menu .form__part .menu-item:hover .ease {
   transition: 0.5s;
 }
 main .menu .form__part .menu-item__title {
-  margin-top: 1em;
+  margin: 0;
+  padding-top: 8px;
+  margin-bottom: -5px;
 }
 main .menu .form__part .menu-item__meta {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  font-size: 0.8em;
+  font-weight: 100;
 }
 main .menu .form__part .menu-item__meta .menu-item__price {
   padding-right: 20px;
@@ -597,7 +602,7 @@ main .menu .form__part .menu-item .check {
   right: -80px;
   width: 80px;
   background-color: #99e2d0;
-  border-radius: 0 15px 15px 0;
+  border-radius: 0 12px 12px 0;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -618,17 +623,14 @@ main .menu .form__part .button-container button {
   border: none;
   border-radius: 40px;
   background: linear-gradient(90deg, #ff79da 0%, #572096 85%);
-  padding: 1em 1.2em;
   box-shadow: 2px 1px 10px 1px rgba(141, 133, 133, 0.48);
   -webkit-box-shadow: 2px 1px 10px 1px rgba(148, 143, 143, 0.48);
   -moz-box-shadow: 2px 1px 10px 1px rgba(146, 142, 142, 0.171);
+  color: white;
+  font-size: 1em;
   color: #fff;
   cursor: pointer;
   width: 100%;
-}
-main .menu .form__part .button-container button a {
-  color: white;
-  font-size: initial;
 }
 main .menu .form__part .button-container button :hover {
   transition: 0.3s;
