@@ -244,6 +244,10 @@ img {
   .option-container__item {
     margin: 0 2em;
   }
+
+  h2 {
+    text-align: center;
+  }
 }
 #restaurants {
   padding: 2.5em 0;
@@ -352,12 +356,21 @@ img {
   padding-top: 0.7em;
 }
 #header section .location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   background: #eaeaea;
   border-top: 3px solid #e7e6e6;
   height: 90px;
 }
-#header section .location span {
+#header section .location a {
+  display: flex;
+  align-items: center;
   justify-content: center;
+}
+#header section .location a i {
+  margin: 1em;
 }
 #header section p {
   padding: 1em 0;

@@ -6,66 +6,75 @@
   align-items: center;
   text-align: center;
 
- & h1 a {
+  & h1 a {
     color: black;
   }
 
- & section {
+  & section {
     width: 100%;
     padding-top: 0.7em;
 
-   & .location {
+    & .location {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
       background: #eaeaea;
       border-top: 3px solid #e7e6e6;
       height: 90px;
 
-    &  span {
+     & a {
+        display: flex;
+        align-items: center;
         justify-content: center;
-      }
 
+       & i {
+          margin: 1em;
+        }
+      }
     }
 
-   & p {
+    & p {
       padding: 1em 0;
       font-weight: 300;
       color: $grey-text-color;
 
-     & i {
+      & i {
         padding-right: 1em;
       }
     }
   }
 
- & .jumbotron {
+  & .jumbotron {
     background-color: $light-grey-color;
     height: 275px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-   & h2 {
+    & h2 {
       font-weight: 900;
       padding: 1em 0;
       margin: 0 .5em;
     }
 
     & p {
-      margin: 0 1em; 
+      margin: 0 1em;
     }
 
-   & button {
+    & button {
       @include button-purple;
       width: 200px;
       height: 60px;
     }
 
-   & button:hover {
+    & button:hover {
       transform: scale(1);
       @include scale-hover;
     }
   }
 
- & .header-img {
+  & .header-img {
     height: 230px;
     width: 100%;
   }
