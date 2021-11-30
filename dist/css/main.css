@@ -244,6 +244,9 @@ img {
   #functional {
     height: auto;
   }
+  #functional h2 {
+    text-align: center;
+  }
 
   .option-container {
     display: flex;
@@ -251,10 +254,6 @@ img {
   }
   .option-container__item {
     margin: 0 2em;
-  }
-
-  h2 {
-    text-align: center;
   }
 }
 #restaurants {
