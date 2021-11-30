@@ -1,243 +1,239 @@
-@import '../header/_header';
-@import '../footer/_footer';
-@import '../_variables';
+/** @format */
+
+@import "../header/_header";
+@import "../footer/_footer";
+@import "../_variables";
 
 header {
+  & span {
+    display: flex;
+    align-items: center;
+    width: 100%;
 
-    & span {
-        display: flex;
-        align-items: center;
-        width: 100%;
-
-        & i {
-            flex: 1;
-            font-size: 20px;
-            color: grey;
-            margin-left: 1em;
-        }
-
-        & h1 {
-            flex: 1;
-            margin-right: 1.5em;
-        }
+    & i {
+      flex: 1;
+      font-size: 20px;
+      color: grey;
+      margin-left: 1em;
     }
 
-    & .cover {
-        background-image: url('../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
-        height: 175px;
-        width: 100%;
-        z-index: -3;
-        background-size: cover;
-        margin-bottom: -1em;
+    & h1 {
+      flex: 1;
+      margin-right: 1.5em;
     }
+  }
 
+  & .cover {
+    background-image: url("../../assets/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    height: 230px;
+    width: 100%;
+    z-index: -1;
+    background-size: cover;
+    margin-bottom: -2em;
+  }
 }
 
 main {
+  border-radius: 40px 40px 0 0;
+  z-index: 3;
+  background-color: #f6f6f6;
 
-    input {
-        display: none;
+  input {
+    display: none;
+  }
+
+  & i.icon-full {
+    display: none;
+    background: $gradiant-purple;
+    // Ici le webkit est obligatoire pour insérer un gradient en color
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  input:checked + label i.icon-full {
+    display: block;
+  }
+
+  input:checked + label .icon-empty {
+    display: none;
+  }
+
+  & span {
+    right: 1em;
+  }
+
+  & .menu {
+    border-radius: 40px 40px 0 0;
+    opacity: 2;
+
+    &__title {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2em;
     }
 
-    & i.icon-full {
-        display: none;
-        background: $gradiant-purple;
-        // Ici le webkit est obligatoire pour insérer un gradient en color
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
+    & .form {
+      &__part {
+        & .form__subtitle {
+          @include upper;
+          color: grey;
+          font-weight: 400;
+          margin-bottom: -0.5em;
+        }
 
-    input:checked+label i.icon-full {
-        display: block;
-    }
+        & hr {
+          height: 3px;
+          margin-left: 1.5em;
+          margin-bottom: 0.5em;
+          width: 12%;
+          color: turquoise;
+          background-color: turquoise;
+          border: none;
+        }
 
-    input:checked+label .icon-empty {
-        display: none;
-    }
+        & .menu-item {
+          margin: 0.5em;
+          height: 3.5em;
+          border-radius: 15px;
+          overflow: hidden;
+          position: relative;
+          padding: 0 1em;
+          @include box_shadow;
+          opacity: 0;
+          animation-fill-mode: forwards;
+          right: -500px;
 
-    & span {
-        right: 1em;
-    }
+          &__desc {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+          }
 
+          & label {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
 
+          &:hover .check {
+            right: 0px;
+          }
 
-    & .menu {
+          &:hover .menu-item__price {
+            padding-right: 80px;
+          }
 
-        &__title {
+          &:hover .ease {
+            transform: rotate(360deg);
+            transition: 0.5s;
+          }
+
+          &__title {
+            margin: 0;
+            padding-top: 8px;
+            margin-bottom: -5px;
+          }
+
+          &__meta {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            padding: 1.2em;
-        }
+            width: 100%;
+            font-size: 0.8em;
+            font-weight: 100;
 
-        & .form {
-
-            &__part {
-
-                & .form__subtitle {
-                    @include upper;
-                    color: grey;
-                    font-weight: 400;
-                    margin-bottom: -.5em;
-                }
-
-                & hr {
-                    height: 3px;
-                    margin-left: 1.5em;
-                    margin-bottom: 0.5em;
-                    width: 12%;
-                    color: turquoise;
-                    background-color: turquoise;
-                    border: none;
-                }
-
-                & .menu-item {
-    
-                    margin: .5em;
-                    height: 3.5em;
-                    border-radius: 15px;
-                    overflow: hidden;
-                    position: relative;
-                    padding: 0 1em;
-                    @include box_shadow;
-                    opacity: 0;
-                    animation-fill-mode: forwards;
-                    right: -500px;
-
-                
-
-                    &__desc {
-                        white-space: nowrap;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        width: 100%;
-                    }
-
-                    & label {
-                        position: absolute;
-                        cursor: pointer;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    &:hover .check {
-                        right: 0px;
-                    }
-
-                    &:hover .menu-item__price {
-                        padding-right: 80px;
-                    }
-
-                    &:hover .ease {
-                        transform: rotate(360deg);
-                        transition: 0.5s;
-                    }
-
-                    &__title {
-                            margin: 0;
-                            padding-top: 8px;
-                            margin-bottom: -5px;
-                    }
-
-                    
-                    &__meta {
-                        display: flex;
-                        justify-content: space-between;
-                        width: 100%;
-                        font-size: .8em;
-                        font-weight: 100;
-
-                        & .menu-item__price {
-                            padding-right: 20px;
-                            transition: 0.3s;
-                        }
-                    }
-
-                    input:checked~.check {
-                        right: 0px;
-                    }
-
-                    input:checked~.menu-item__meta .menu-item__price {
-                        padding-right: 80px;
-                    }
-
-                    input:checked~.check .ease {
-                        transform: rotate(360deg);
-                        transition: 0.5s;
-                    }
-
-                    & .check {
-                        position: absolute;
-                        top: 0;
-                        bottom: 0;
-                        right: -80px;
-                        width: 80px;
-                        background-color: #99e2d0;
-                        border-radius: 0 12px 12px 0;
-                        display: flex;
-                        flex-direction: column;
-                        justify-content: space-around;
-                        align-items: center;
-                        transition: 0.3s;
-
-                        & .fas:before {
-                            color: #fff;
-                        }
-                    }
-                }
-
-                & .button-container {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    max-width: 12em;
-                    margin: 2.5em auto;
-
-                    & button {
-                        @include button-purple;
-                        color: #fff;
-                        cursor: pointer;
-                        padding: .6em 1.7em;
-
-                        :hover {
-                            @include scale-hover;
-                        }
-                    }
-                }
+            & .menu-item__price {
+              padding-right: 20px;
+              transition: 0.3s;
             }
-        }
-    }
-}
+          }
 
+          input:checked ~ .check {
+            right: 0px;
+          }
+
+          input:checked ~ .menu-item__meta .menu-item__price {
+            padding-right: 80px;
+          }
+
+          input:checked ~ .check .ease {
+            transform: rotate(360deg);
+            transition: 0.5s;
+          }
+
+          & .check {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -80px;
+            width: 80px;
+            background-color: #99e2d0;
+            border-radius: 0 12px 12px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            transition: 0.3s;
+
+            & .fas:before {
+              color: #fff;
+            }
+          }
+        }
+
+        & .button-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          max-width: 12em;
+          margin: 2.5em auto;
+
+          & button {
+            @include button-purple;
+            color: #fff;
+            cursor: pointer;
+            padding: 0.6em 1.7em;
+
+            :hover {
+              @include scale-hover;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 // animation menu-item
 
 @for $i from 1 through 40 {
-    .menu-item-#{$i} {
-        animation-name: displayCard;
-        animation-duration: 1s;
-        animation-delay: #{$i * 0.1}s;
-    }
+  .menu-item-#{$i} {
+    animation-name: displayCard;
+    animation-duration: 1s;
+    animation-delay: #{$i * 0.1}s;
+  }
 }
 
 @keyframes displayCard {
-    to {
-        right: 0;
-        opacity: 1;
-    }
+  to {
+    right: 0;
+    opacity: 1;
+  }
 }
 
 @media screen and (min-width: 768px) {
-    .menu-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-    }
-    .form {
-        margin: 0 25%;
-    }
+  .menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  .form {
+    margin: 0 25%;
+  }
 }
