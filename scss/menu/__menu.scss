@@ -78,6 +78,7 @@ main {
                     @include upper;
                     color: grey;
                     font-weight: 400;
+                    margin-bottom: -.5em;
                 }
 
                 & hr {
@@ -94,7 +95,7 @@ main {
     
                     margin: .5em;
                     height: 3.5em;
-                    border-radius: 12px;
+                    border-radius: 15px;
                     overflow: hidden;
                     position: relative;
                     padding: 0 1em;
@@ -198,7 +199,7 @@ main {
                         @include button-purple;
                         color: #fff;
                         cursor: pointer;
-                        width: 100%;
+                        padding: .6em 1.7em;
 
                         :hover {
                             @include scale-hover;

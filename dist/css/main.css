@@ -521,6 +521,7 @@ main .menu .form__part .form__subtitle {
   margin-top: 1.5em;
   color: grey;
   font-weight: 400;
+  margin-bottom: -0.5em;
 }
 main .menu .form__part hr {
   height: 3px;
@@ -534,7 +535,7 @@ main .menu .form__part hr {
 main .menu .form__part .menu-item {
   margin: 0.5em;
   height: 3.5em;
-  border-radius: 12px;
+  border-radius: 15px;
   overflow: hidden;
   position: relative;
   padding: 0 1em;
@@ -630,7 +631,7 @@ main .menu .form__part .button-container button {
   font-size: 1em;
   color: #fff;
   cursor: pointer;
-  width: 100%;
+  padding: 0.6em 1.7em;
 }
 main .menu .form__part .button-container button :hover {
   transition: 0.3s;
