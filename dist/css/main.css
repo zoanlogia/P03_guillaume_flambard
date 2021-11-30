@@ -145,6 +145,11 @@ img {
     z-index: -1;
   }
 }
+/** @format */
+#main {
+  background-color: white;
+}
+
 #functional {
   height: 60vh;
 }
@@ -236,6 +241,10 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  #functional {
+    height: auto;
+  }
+
   .option-container {
     display: flex;
     flex-direction: row;
@@ -543,7 +552,7 @@ main .menu .form__part hr {
   border: none;
 }
 main .menu .form__part .menu-item {
-  margin: 0.5em;
+  margin: 0.8em 0.5em;
   height: 3.5em;
   border-radius: 15px;
   overflow: hidden;
@@ -610,8 +619,8 @@ main .menu .form__part .menu-item .check {
   position: absolute;
   top: 0;
   bottom: 0;
-  right: -80px;
-  width: 80px;
+  right: -50px;
+  width: 50px;
   background-color: #99e2d0;
   border-radius: 0 12px 12px 0;
   display: flex;
@@ -627,8 +636,7 @@ main .menu .form__part .button-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: 12em;
-  margin: 2.5em auto;
+  height: 8em;
 }
 main .menu .form__part .button-container button {
   border: none;

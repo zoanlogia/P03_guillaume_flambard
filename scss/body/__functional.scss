@@ -1,100 +1,107 @@
+/** @format */
+#main {
+  background-color: white;
+}
+
 #functional {
-height: 60vh;
-   & h2 {
-        margin: 1.5em 0 .5em 1em;
-        font-size: 1.4em;
+  height: 60vh;
+  & h2 {
+    margin: 1.5em 0 0.5em 1em;
+    font-size: 1.4em;
+  }
+
+  & .option-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    @include option;
+    cursor: pointer;
+
+    :hover {
+      @include scale-hover;
+      background-color: $light-hover;
+
+      & i {
+        color: $primary-color;
+      }
     }
 
-   & .option-container {
-        display: flex;
-        flex-wrap: wrap;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin: 0 auto;
-        @include option;
+    &__item {
+      position: relative;
+      background-color: $light-grey-color;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 0.2em;
+      margin: 1em;
+      @include option;
+      @include box_shadow;
+      width: 300px;
+
+      & .dot {
+        left: -1em;
+        height: 25px;
+        width: 25px;
+        background-color: $primary-color;
+        border-radius: 50%;
+        position: absolute;
+        color: white;
+        line-height: 25px;
+      }
+
+      & i {
+        color: rgb(158, 151, 151);
+        font-size: 20px;
+      }
+
+      & i,
+      strong {
+        margin: 1em;
+      }
+
+      :hover {
+        box-shadow: none;
         cursor: pointer;
+      }
+    }
+  }
 
-        :hover {
-            @include scale-hover;
-            background-color: $light-hover;
+  & .button-container {
+    text-align: center;
+    padding: 2em 0 3em 0;
 
-           & i {
-                color: $primary-color;
-            }
-        }
-
-        &__item {
-            position: relative;
-            background-color: $light-grey-color;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            padding: 0.2em;
-            margin: 1em;
-            @include option;
-            @include box_shadow;
-            width: 300px;
-
-           & .dot {
-               left: -1em;
-                height: 25px;
-                width: 25px;
-                background-color: $primary-color;
-                border-radius: 50%;
-                position: absolute;
-                color: white;
-                line-height: 25px;
-            }
-
-           & i {
-                color: rgb(158, 151, 151);
-                font-size: 20px;
-            }
-
-           & i,
-            strong {
-                margin: 1em;
-            }
-
-            :hover {
-                box-shadow: none;
-                cursor: pointer;
-            }
-        }
+    & button {
+      width: 60%;
+      @include button-purple;
     }
 
-   & .button-container {
-
-        text-align: center;
-        padding: 2em 0 3em 0;
-
-       & button {
-            width: 60%;
-            @include button-purple;
-        }
-
-        button:hover {
-            transform: scale(1);
-            @include scale-hover;
-        }
+    button:hover {
+      transform: scale(1);
+      @include scale-hover;
     }
+  }
 }
 
 @media screen and (min-width: 768px) {
-    
-    .option-container {
-        display: flex;
-        flex-direction: row;
+#functional {
+    height: auto;
+}
 
-        &__item {
-            margin: 0 2em;
-        }
-    }
+  .option-container {
+    display: flex;
+    flex-direction: row;
 
-    h2 {
-        text-align: center;
+    &__item {
+      margin: 0 2em;
     }
+  }
+
+  h2 {
+    text-align: center;
+  }
 }
